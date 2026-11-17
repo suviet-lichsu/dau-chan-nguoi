@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DẤU CHÂN NGƯỜI — Chuyên San Tương Tác Lịch Sử &amp; Di Sản Hồ Chí Minh</title>
+
+  <!-- Google Fonts: Merriweather (Tiêu đề trang trọng & trích dẫn) và Be Vietnam Pro (Nội dung tiếng Việt sắc nét) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Merriweather:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Merriweather"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            moss: '#1B3B2B',
+            mossDeep: '#12291E',
+            ivory: '#FDFBF7',
+            antiquePaper: '#F5F0E6',
+            terracotta: '#B91C1C',
+            bronze: '#B45309',
+            ink: '#1F2937',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Nền Giấy Ngà Ấm (#FDFBF7) kết hợp vân giấy chuyên san lịch sử */
+    body {
+      background-color: #FDFBF7;
+      background-image:
+        radial-gradient(rgba(27, 59, 43, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(245, 240, 230, 0.6) 0%, rgba(253, 251, 247, 0.96) 100%);
+      background-size: 24px 24px, 100% 100%;
+      color: #1F2937;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .font-editorial {
+      font-family: 'Merriweather', Georgia, serif;
+    }
+
+    /* Hiệu ứng chuyển nội dung mượt mà */
+    .panel-fade {
+      animation: panelFade 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes panelFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hiệu ứng rung nhẹ khi ghép chưa đúng cặp mốc lịch sử */
+    .shake-gentle {
+      animation: shakeGentle 0.34s ease-in-out;
+    }
+    @keyframes shakeGentle {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    /* Khung Bưu Thiếp Lịch Sử (Tab 01) */
+    .postcard-frame {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(27, 59, 43, 0.18);
+      box-shadow:
+        0 14px 34px -12px rgba(27, 59, 43, 0.12),
+        inset 0 0 0 6px #FDFBF7,
+        inset 0 0 0 7px rgba(180, 83, 9, 0.28);
+    }
+
+    /* Khung Tủ Kính Trưng Bày Bảo Tàng (Tab 02) */
+    .museum-vitrine {
+      background: radial-gradient(circle at 50% 35%, #FFFFFF 0%, #F5F0E6 78%, #EAE2D2 100%);
+      border: 2px solid rgba(180, 83, 9, 0.42);
+      box-shadow:
+        inset 0 0 28px rgba(27, 59, 43, 0.08),
+        0 10px 26px -10px rgba(27, 59, 43, 0.14);
+    }
+
+    /* Ẩn thanh cuộn ngang cho thanh tab trên màn hình nhỏ nhưng vẫn vuốt mượt */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#1B3B2B] selection:text-[#FDFBF7]">
+
+  <!-- =====================================================================
+       1. MASTHEAD CHUYÊN SAN & THANH ĐIỀU HƯỚNG 4 TAB ĐỘC LẬP
+  ====================================================================== -->
+  <header class="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#1B3B2B]/15 shadow-2xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-3.5 pb-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+      <!-- Biểu tượng Hoa Sen & Ngôi Sao Vàng + Tiêu đề Chuyên San -->
+      <div class="flex items-center gap-3.5 min-w-0">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#1B3B2B] border-2 border-[#B45309]/75 flex items-center justify-center shrink-0 shadow-xs">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <!-- Ngôi sao vàng tỏa sáng phía trên đài sen -->
+            <polygon points="20,4 21.8,9.2 27.3,9.2 22.9,12.4 24.5,17.6 20,14.4 15.5,17.6 17.1,12.4 12.7,9.2 18.2,9.2" fill="#F59E0B"/>
+            <!-- Cánh hoa sen cách điệu -->
+            <path d="M20 16.5C17.4 21.2 17 25.5 20 29.8C23 25.5 22.6 21.2 20 16.5Z" fill="#FDFBF7"/>
+            <path d="M12.2 20.5C12.2 25.2 14.8 28.4 19.3 30.4C18 25.7 15.8 22.4 12.2 20.5Z" fill="#FDE68A" opacity="0.92"/>
+            <path d="M27.8 20.5C27.8 25.2 25.2 28.4 20.7 30.4C22 25.7 24.2 22.4 27.8 20.5Z" fill="#FDE68A" opacity="0.92"/>
+            <path d="M7.5 26.8C10.8 30.4 15.2 31.8 20 31.8C24.8 31.8 29.2 30.4 32.5 26.8C29.2 32.8 24.5 35.2 20 35.2C15.5 35.2 10.8 32.8 7.5 26.8Z" fill="#F59E0B"/>
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <h1 class="font-editorial text-xl sm:text-2xl font-black tracking-tight text-[#1B3B2B] leading-tight">
+            DẤU CHÂN NGƯỜI
+          </h1>
+          <p class="text-xs sm:text-[13px] font-medium text-[#1F2937]/80 truncate">
+            Chuyên San Tương Tác Lịch Sử &amp; Di Sản Hồ Chí Minh
+          </p>
+        </div>
+      </div>
+
+      <!-- Nhãn ấn phẩm biên tập -->
+      <div class="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5F0E6] border border-[#B45309]/30 text-[11px] font-bold uppercase tracking-widest text-[#B45309] shrink-0">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#B91C1C]"></span>
+        <span>Ấn Phẩm Di Sản Số</span>
+      </div>
+    </div>
+
+    <!-- Thanh điều hướng 4 Tab độc lập -->
+    <nav aria-label="Điều hướng chuyên san" class="max-w-6xl mx-auto px-3 sm:px-6">
+      <div id="main-tabs-bar" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar pb-2.5 pt-1"></div>
+    </nav>
+  </header>
+
+  <!-- =====================================================================
+       2. KHUNG NỘI DUNG CHÍNH (MỖI TAB HIỂN THỊ ĐỘC LẬP, SÚC TÍCH)
+  ====================================================================== -->
+  <main id="tab-viewport" class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-9"></main>
+
+  <!-- =====================================================================
+       3. CHÂN TRANG BIÊN TẬP TINH GỌN
+  ====================================================================== -->
+  <footer class="border-t border-[#1B3B2B]/15 bg-[#F5F0E6] mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#1F2937]/80">
+      <span class="font-editorial font-bold text-[#1B3B2B]">
+        DẤU CHÂN NGƯỜI — Chuyên San Tương Tác Lịch Sử &amp; Di Sản Hồ Chí Minh
+      </span>
+      <span class="text-[#B45309] font-semibold">Không gian tri thức lịch sử &amp; văn hóa</span>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       4. KHUNG THÔNG BÁO TOAST NHẸ NHÀNG (KHÔNG DÙNG ALERT)
+  ====================================================================== -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+  <!-- =====================================================================
+       5. DỮ LIỆU & LOGIC JAVASCRIPT HOÀN CHỈNH (100% SELF-CONTAINED)
+  ====================================================================== -->
+  <script>
+    /**
+     * =====================================================================
+     * CẤU HÌNH 4 TAB CHÍNH CỦA CHUYÊN SAN
+     * =====================================================================
+     */
+    const TABS = [
+      { id: 'tab1', num: 'Tab 01', label: 'Hành Trình Cứu Nước' },
+      { id: 'tab2', num: 'Tab 02', label: 'Phòng Trưng Bày Kỷ Vật' },
+      { id: 'tab3', num: 'Tab 03', label: 'Thử Thách Sử Việt' },
+      { id: 'tab4', num: 'Tab 04', label: 'Bút Danh & Tên Gọi' }
+    ];
+
+    /**
+     * =====================================================================
+     * DỮ LIỆU TAB 01: HÀNH TRÌNH CỨU NƯỚC (1911–1945) — 6 CHẶNG LỊCH SỬ
+     * =====================================================================
+     */
+    const JOURNEY_STOPS = [
+      {
+        id: 1,
+        year: '1911',
+        shortPlace: 'Bến Nhà Rồng',
+        fullPlace: 'Thương cảng Sài Gòn (Bến Nhà Rồng, TP. Hồ Chí Minh)',
+        postmark: 'SÀI GÒN • 05-06-1911',
+        title: 'Rời Bến Nhà Rồng Ra Đi Tìm Đường Cứu Nước',
+        context: 'Trước cảnh nước mất nhà tan và các phong trào yêu nước đương thời đều rơi vào bế tắc về đường lối, ngày 05/06/1911, người thanh niên Nguyễn Tất Thành với tên gọi Văn Ba và đôi bàn tay lao động đã bước lên tàu buôn Amiral Latouche-Tréville từ Bến Nhà Rồng, mở đầu hành trình 30 năm bôn ba qua nhiều đại dương và châu lục để tìm con đường giải phóng dân tộc.',
+        quote: '“Tự do cho đồng bào tôi, độc lập cho Tổ quốc tôi, đấy là tất cả những điều tôi muốn; đấy là tất cả những điều tôi hiểu.”',
+        quoteSource: 'Tâm nguyện của người thanh niên Nguyễn Tất Thành khi xuất dương tìm đường cứu nước',
+        significance: 'Mở đầu cuộc hành trình vĩ đại kết nối cách mạng Việt Nam với trào lưu cách mạng tiến bộ của thời đại, đặt nền móng cho bước ngoặt lịch sử dân tộc thế kỷ XX.',
+        artType: 'nha-rong'
+      },
+      {
+        id: 2,
+        year: '1919',
+        shortPlace: 'Hội nghị Versailles',
+        fullPlace: 'Cung điện Versailles, Paris, Cộng hòa Pháp',
+        postmark: 'PARIS • 18-06-1919',
+        title: 'Gửi Bản Yêu Sách Của Nhân Dân An Nam Tới Hội Nghị Versailles',
+        context: 'Nhân dịp các cường quốc thắng trận họp Hội nghị Hòa bình Versailles phân chia lại thế giới sau Chiến tranh thế giới thứ nhất, thay mặt Hội những người Việt Nam yêu nước tại Pháp và lần đầu tiên ký tên Nguyễn Ái Quốc, Người đã gửi tới Hội nghị bản Yêu sách 8 điểm đòi ân xá tù chính trị, tự do báo chí, tự do hội họp và bình đẳng pháp lý cho nhân dân Việt Nam ngay tại trung tâm đế quốc Pháp.',
+        quote: '“Tất cả các dân tộc trên thế giới đều sinh ra bình đẳng; dân tộc nào cũng có quyền sống, quyền sung sướng và quyền tự do.”',
+        quoteSource: 'Tinh thần Bản Yêu sách của nhân dân An Nam gửi Hội nghị Versailles (18/06/1919)',
+        significance: 'Tiếng nói chính nghĩa đầu tiên của dân tộc Việt Nam vang lên trên diễn đàn quốc tế, làm thức tỉnh lòng yêu nước của đồng bào trong nước và kiều bào ở nước ngoài.',
+        artType: 'versailles'
+      },
+      {
+        id: 3,
+        year: '1920',
+        shortPlace: 'Đại hội Tours',
+        fullPlace: 'Thành phố Tours (Tua), Cộng hòa Pháp',
+        postmark: 'TOURS • 30-12-1920',
+        title: 'Tìm Thấy Chân Lý Cứu Nước & Tham Gia Sáng Lập Đảng Cộng Sản Pháp',
+        context: 'Sau khi đọc “Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa” của V.I. Lê-nin trên báo L’Humanité (tháng 7/1920), Nguyễn Ái Quốc tìm thấy con đường giải phóng dân tộc đúng đắn. Tại Đại hội lần thứ XVIII Đảng Xã hội Pháp họp ở thành phố Tours cuối tháng 12/1920, Người bỏ phiếu tán thành gia nhập Quốc tế Cộng sản và trở thành một trong những người sáng lập Đảng Cộng sản Pháp.',
+        quote: '“Hỡi đồng bào bị đọa đày đau khổ! Đây là cái cần thiết cho chúng ta, đây là con đường giải phóng chúng ta!”',
+        quoteSource: 'Lời xúc động của Nguyễn Ái Quốc khi đọc Luận cương của V.I. Lê-nin (1920)',
+        significance: 'Bước ngoặt quyết định đưa Nguyễn Ái Quốc từ chủ nghĩa yêu nước chân chính đến với chủ nghĩa Mác – Lê-nin, trở thành người chiến sĩ cộng sản Việt Nam đầu tiên.',
+        artType: 'tours'
+      },
+      {
+        id: 4,
+        year: '1930',
+        shortPlace: 'Hương Cảng (Thành lập Đảng)',
+        fullPlace: 'Cửu Long, Hương Cảng (Hồng Kông)',
+        postmark: 'HƯƠNG CẢNG • 03-02-1930',
+        title: 'Hội Nghị Hợp Nhất Thành Lập Đảng Cộng Sản Việt Nam',
+        context: 'Cuối năm 1929, sự xuất hiện của ba tổ chức cộng sản hoạt động riêng rẽ đặt ra yêu cầu cấp bách phải thống nhất lực lượng lãnh đạo. Với uy tín và tầm nhìn chiến lược, lãnh tụ Nguyễn Ái Quốc đã triệu tập và chủ trì Hội nghị hợp nhất tại Hương Cảng, thành lập Đảng Cộng sản Việt Nam và thông qua Chánh cương vắn tắt, Sách lược vắn tắt do Người khởi thảo.',
+        quote: '“Đảng Cộng sản Việt Nam đã được thành lập. Đó là Đảng của giai cấp vô sản. Đảng sẽ dìu dắt giai cấp vô sản lãnh đạo cách mạng An Nam đấu tranh...”',
+        quoteSource: 'Lời kêu gọi nhân dịp thành lập Đảng Cộng sản Việt Nam (03/02/1930)',
+        significance: 'Chấm dứt thời kỳ khủng hoảng sâu sắc về đường lối cứu nước kéo dài nhiều thập kỷ, mở ra kỷ nguyên mới cho phong trào đấu tranh giành độc lập.',
+        artType: 'dang-1930'
+      },
+      {
+        id: 5,
+        year: '1941',
+        shortPlace: 'Hang Pác Bó',
+        fullPlace: 'Hang Cốc Bó, Pác Bó, Hà Quảng, Cao Bằng',
+        postmark: 'CAO BẰNG • 28-01-1941',
+        title: 'Trở Về Tổ Quốc Sau 30 Năm Xa Cách & Lập Mặt Trận Việt Minh',
+        context: 'Ngày 28/01/1941 (mùng 2 Tết Tân Tỵ), sau đúng ba thập kỷ hoạt động ở nước ngoài, Bác Hồ vượt qua cột mốc 108 biên giới Việt – Trung trở về Pác Bó (Cao Bằng). Sống và làm việc trong hang Cốc Bó đơn sơ bên suối Lê-nin, núi Các Mác, Người trực tiếp chủ trì Hội nghị Trung ương 8 (tháng 5/1941), đặt nhiệm vụ giải phóng dân tộc lên hàng đầu và sáng lập Mặt trận Việt Minh.',
+        quote: '“Trong lúc này quyền lợi dân tộc giải phóng cao hơn hết thảy. Chúng ta phải đoàn kết lại đánh đổ bọn đế quốc và bọn Việt gian đặng cứu giống nòi ra khỏi nước sôi lửa nóng.”',
+        quoteSource: 'Thư Kính cáo đồng bào — Nguyễn Ái Quốc (06/06/1941)',
+        significance: 'Xây dựng căn cứ địa cách mạng đầu tiên và quy tụ khối đại đoàn kết toàn dân tộc chuẩn bị lực lượng cho cuộc Tổng khởi nghĩa giành chính quyền.',
+        artType: 'pac-bo'
+      },
+      {
+        id: 6,
+        year: '1945',
+        shortPlace: 'Quảng trường Ba Đình',
+        fullPlace: 'Quảng trường Ba Đình, Thủ đô Hà Nội',
+        postmark: 'HÀ NỘI • 02-09-1945',
+        title: 'Đọc Tuyên Ngôn Độc Lập Khai Sinh Nước Việt Nam Mới',
+        context: 'Chớp thời cơ lịch sử ngàn năm có một của Cách mạng Tháng Tám năm 1945, chiều ngày 02/09/1945, giữa biển cờ đỏ sao vàng tại Quảng trường Ba Đình lịch sử, Chủ tịch Hồ Chí Minh trịnh trọng đọc bản Tuyên ngôn Độc lập do Người soạn thảo tại nhà số 48 Hàng Ngang, tuyên bố trước quốc dân đồng bào và toàn thế giới sự ra đời của nước Việt Nam Dân chủ Cộng hòa.',
+        quote: '“Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do, độc lập. Toàn thể dân tộc Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do, độc lập ấy.”',
+        quoteSource: 'Tuyên ngôn Độc lập — Chủ tịch Hồ Chí Minh (02/09/1945)',
+        significance: 'Xóa bỏ vĩnh viễn chế độ thực dân phong kiến, mở ra kỷ nguyên độc lập, tự do và nhân dân lao động làm chủ vận mệnh non sông.',
+        artType: 'ba-dinh'
+      }
+    ];
+
+    /**
+     * =====================================================================
+     * DỮ LIỆU TAB 02: PHÒNG TRƯNG BÀY KỶ VẬT (6 HIỆN VẬT BẢO TÀNG)
+     * =====================================================================
+     */
+    const MUSEUM_ARTIFACTS = [
+      {
+        id: 'hv1',
+        code: 'HV-01',
+        name: 'Đôi Dép Cao Su Bình Trị Thiên',
+        year: '1947',
+        material: 'Cao su lốp ô tô quân sự Pháp',
+        location: 'Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch (Hà Nội)',
+        originStory: 'Năm 1947, trong những ngày đầu kháng chiến gian khổ tại chiến khu Việt Bắc, chiến sĩ cảnh vệ đã cắt một chiếc lốp ô tô quân sự của thực dân Pháp thu được trên mặt trận Bình – Trị – Thiên để đóng tặng Bác Hồ đôi dép cao su đơn sơ. Từ đó, đôi dép đồng hành cùng Bác suốt hơn 20 năm qua núi rừng Việt Bắc đến những chuyến thăm ngoại giao quốc tế.',
+        features: 'Đế dép được cắt từ phần lốp xe dày dặn có các rãnh chống trơn tự nhiên; gồm 4 quai cao su mảnh luồn xuyên qua đế một cách khéo léo, không dùng keo dán hay khâu chỉ. Khi quai dép bị tuột vì mòn, Bác tự tay dùng đinh nhỏ ghim lại để tiếp tục sử dụng.',
+        symbolicValue: 'Biểu tượng bất hủ cho lối sống thanh bạch, cần kiệm và phong cách gần gũi, đồng cam cộng khổ của vị lãnh tụ suốt đời gắn bó máu thịt với nhân dân lao động.',
+        svgType: 'sandals'
+      },
+      {
+        id: 'hv2',
+        code: 'HV-02',
+        name: 'Chiếc Máy Chữ Hermes Baby',
+        year: 'Thập niên 1940',
+        material: 'Hợp kim sơn tĩnh điện, bàn phím cơ học',
+        location: 'Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch (Hà Nội)',
+        originStory: 'Trong suốt thời kỳ hoạt động bí mật ở nước ngoài, tại chiến khu Việt Bắc cho tới những năm tháng làm việc ở Phủ Chủ tịch, Chủ tịch Hồ Chí Minh luôn tự tay đánh máy các bài báo, thư gửi đồng bào, chỉ thị cách mạng và bản thảo Di chúc lịch sử trên chiếc máy chữ xách tay nhỏ gọn nhãn hiệu Hermes Baby.',
+        features: 'Thiết kế siêu gọn nhẹ chỉ nặng khoảng 3,8 kg với nắp đậy kim loại màu xanh xám bền bỉ, giúp Người dễ dàng mang theo trên lưng ngựa hoặc trong ba lô mỗi khi di chuyển căn cứ giữa rừng núi Việt Bắc. Bàn phím gõ êm và sắc nét sau hàng chục năm sử dụng.',
+        symbolicValue: 'Minh chứng sinh động cho tác phong làm việc khoa học, tự lực, tỉ mỉ và sức lao động trí tuệ không ngừng nghỉ của Chủ tịch Hồ Chí Minh.',
+        svgType: 'typewriter'
+      },
+      {
+        id: 'hv3',
+        code: 'HV-03',
+        name: 'Bộ Quần Áo Kaki Bạc Màu',
+        year: '1945',
+        material: 'Vải kaki sợi bông màu vàng nhạt',
+        location: 'Bảo tàng Hồ Chí Minh (Thủ đô Hà Nội)',
+        originStory: 'Cuối tháng 8/1945, chuẩn bị cho Lễ Độc lập ngày 02/09/1945 tại Quảng trường Ba Đình, đồng chí Võ Nguyên Giáp và ban tổ chức đã nhờ hiệu may Phú Thịnh (Hà Nội) may cho Chủ tịch Hồ Chí Minh một bộ trang phục giản dị để ra mắt quốc dân đồng bào. Bộ quần áo kaki ấy đã gắn bó với Bác suốt 24 năm trên cương vị Chủ tịch nước.',
+        features: 'Áo may kiểu cổ đứng, cài cúc thẳng phía trước với bốn túi nổi cân đối, không cầu vai hay huy hiệu rườm rà. Qua năm tháng giặt giũ và sử dụng, màu vải kaki đã ngả bạc tự nhiên, cổ áo và tay áo từng được khâu vá cẩn thận.',
+        symbolicValue: 'Tạo nên hình ảnh dung dị, thân thương mà vô cùng uy nghiêm của “Vị Chủ tịch mặc áo vải” trong lòng nhân dân Việt Nam và bạn bè năm châu.',
+        svgType: 'suit'
+      },
+      {
+        id: 'hv4',
+        code: 'HV-04',
+        name: 'Tờ Báo Le Paria (Người Cùng Khổ)',
+        year: '1922',
+        material: 'Giấy báo in khổ lớn (tiếng Pháp, Ả Rập, chữ Hán)',
+        location: 'Bảo tàng Hồ Chí Minh & Thư viện Quốc gia Việt Nam',
+        originStory: 'Ngày 01/04/1922 tại Paris (Pháp), Nguyễn Ái Quốc cùng các nhà cách mạng yêu nước từ các thuộc địa Đông Dương, Bắc Phi và Tây Phi đã sáng lập và xuất bản số đầu tiên tờ báo Le Paria (Người Cùng Khổ). Người trực tiếp giữ vai trò chủ nhiệm, chủ bút, viết bài, vẽ tranh biếm họa và tự tay đi phát hành báo.',
+        features: 'Măng-sét báo in đậm dòng chữ “LE PARIA — Tribune des populations des colonies” (Diễn đàn của nhân dân các nước thuộc địa), kèm dòng chữ tiếng Hán và tiếng Ả Rập khẳng định tinh thần đoàn kết quốc tế của các dân tộc bị áp bức.',
+        symbolicValue: 'Vũ khí tư tưởng sắc bén đầu tiên vạch trần tội ác thực dân và truyền bá ánh sáng giải phóng dân tộc tới các nước thuộc địa trên toàn thế giới.',
+        svgType: 'newspaper'
+      },
+      {
+        id: 'hv5',
+        code: 'HV-05',
+        name: 'Ngôi Nhà Sàn Gỗ Bên Ao Cá',
+        year: '1958',
+        material: 'Gỗ xoan, gỗ bưởi mộc, mái lợp ngói ta',
+        location: 'Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch (Hà Nội)',
+        originStory: 'Từ chối ở trong tòa nhà Toàn quyền Đông Dương cũ tráng lệ, tháng 5/1958, Bác Hồ đề nghị dựng một ngôi nhà sàn gỗ nhỏ bên bờ ao trong vườn Phủ Chủ tịch theo kiểu nhà sàn truyền thống của đồng bào dân tộc Tày – Nùng vùng chiến khu Việt Bắc để sống và làm việc cho đến cuối đời.',
+        features: 'Nhà sàn gồm 2 tầng bằng gỗ mộc không sơn son thếp vàng: tầng dưới thoáng đãng là nơi họp Bộ Chính trị và tiếp khách thân mật; tầng trên gồm 2 phòng nhỏ (phòng làm việc và phòng nghỉ) với chiếc giường mây, bàn làm việc đơn sơ và giá sách gọn gàng.',
+        symbolicValue: 'Không gian kiến trúc hòa quyện trọn vẹn với thiên nhiên, phản ánh tâm hồn thanh cao, ung dung tự tại và tấm lòng luôn hướng về đồng bào miền núi, miền xuôi.',
+        svgType: 'stilt-house'
+      },
+      {
+        id: 'hv6',
+        code: 'HV-06',
+        name: 'Tác Phẩm Đường Kách Mệnh',
+        year: '1927',
+        material: 'Sách in thạch bản (in đá) trên giấy dó mỏng',
+        location: 'Bảo tàng Lịch sử Quốc gia (Bảo vật Quốc gia)',
+        originStory: 'Từ năm 1925 đến đầu năm 1927 tại Quảng Châu (Trung Quốc), lãnh tụ Nguyễn Ái Quốc trực tiếp mở các lớp huấn luyện chính trị đào tạo cán bộ cách mạng Việt Nam. Các bài giảng của Người được Bộ Tuyên truyền của Hội Liên hiệp các dân tộc bị áp bức tập hợp và in thành cuốn sách “Đường Kách mệnh” đầu năm 1927.',
+        features: 'Sách khổ nhỏ (khoảng 15 × 22 cm) in bằng kỹ thuật in đá trên giấy dó mỏng để các chiến sĩ cách mạng dễ dàng cất giấu trong hành lý khi bí mật chuyển về nước. Bìa sách trình bày mộc mạc với tiêu đề chữ in hoa rõ nét.',
+        symbolicValue: 'Được công nhận là Bảo vật Quốc gia — tác phẩm lý luận nền tảng trực tiếp chuẩn bị về tư tưởng, chính trị và tổ chức cho sự ra đời của Đảng Cộng sản Việt Nam.',
+        svgType: 'book-1927'
+      }
+    ];
+
+    /**
+     * =====================================================================
+     * DỮ LIỆU TAB 03: THỬ THÁCH SỬ VIỆT (2 BỘ NỐI MỐC & 8 CÂU TRẮC NGHIỆM)
+     * =====================================================================
+     */
+    const MATCHING_SETS = [
+      {
+        id: 'set1',
+        title: 'Bộ 1: Những Bước Ngoặt Lịch Sử Trọng Đại',
+        pairs: [
+          {
+            id: 'p1',
+            event: 'Ra đi tìm đường cứu nước trên tàu Amiral Latouche-Tréville',
+            target: '05/06/1911 • Bến Nhà Rồng',
+            info: 'Người thanh niên Văn Ba rời Bến Nhà Rồng bắt đầu hành trình 30 năm tìm con đường giải phóng dân tộc.'
+          },
+          {
+            id: 'p2',
+            event: 'Gửi Bản Yêu sách của nhân dân An Nam gồm 8 điểm',
+            target: '18/06/1919 • Hội nghị Versailles (Pháp)',
+            info: 'Lần đầu tiên danh xưng Nguyễn Ái Quốc xuất hiện công khai trên diễn đàn quốc tế.'
+          },
+          {
+            id: 'p3',
+            event: 'Bỏ phiếu tán thành Quốc tế III, sáng lập Đảng Cộng sản Pháp',
+            target: '30/12/1920 • Thành phố Tours (Pháp)',
+            info: 'Nguyễn Ái Quốc trở thành người chiến sĩ cộng sản Việt Nam đầu tiên.'
+          },
+          {
+            id: 'p4',
+            event: 'Chủ trì Hội nghị hợp nhất thành lập Đảng Cộng sản Việt Nam',
+            target: '03/02/1930 • Cửu Long, Hương Cảng',
+            info: 'Chấm dứt thời kỳ khủng hoảng sâu sắc về đường lối cứu nước của cách mạng Việt Nam.'
+          },
+          {
+            id: 'p5',
+            event: 'Vượt cột mốc 108 trở về Tổ quốc sau 30 năm bôn ba',
+            target: '28/01/1941 • Hang Pác Bó (Cao Bằng)',
+            info: 'Bác Hồ trực tiếp lãnh đạo cách mạng trong nước và sáng lập Mặt trận Việt Minh.'
+          },
+          {
+            id: 'p6',
+            event: 'Trịnh trọng đọc Tuyên ngôn Độc lập khai sinh nước Việt Nam mới',
+            target: '02/09/1945 • Quảng trường Ba Đình',
+            info: 'Khai sinh nước Việt Nam Dân chủ Cộng hòa, mở ra kỷ nguyên độc lập tự do.'
+          }
+        ]
+      },
+      {
+        id: 'set2',
+        title: 'Bộ 2: Tác Phẩm, Kỷ Vật & Dấu Ấn Di Sản',
+        pairs: [
+          {
+            id: 's2_1',
+            event: 'Sáng lập và làm chủ bút tờ báo Le Paria (Người Cùng Khổ)',
+            target: '01/04/1922 • Thủ đô Paris (Pháp)',
+            info: 'Diễn đàn đoàn kết và thức tỉnh nhân dân các nước thuộc địa chống chủ nghĩa thực dân.'
+          },
+          {
+            id: 's2_2',
+            event: 'Xuất bản cuốn sách lý luận cách mạng “Đường Kách mệnh”',
+            target: 'Năm 1927 • Quảng Châu (Trung Quốc)',
+            info: 'Tập hợp các bài giảng huấn luyện cán bộ cách mạng Việt Nam giai đoạn 1925–1927.'
+          },
+          {
+            id: 's2_3',
+            event: 'Sáng tác tập thơ chữ Hán “Nhật ký trong tù” gồm 133 bài',
+            target: '1942 – 1943 • Nhà lao Quảng Tây',
+            info: 'Kết tinh tinh thần thép, trí tuệ lạc quan và lòng yêu nước nồng nàn của Người.'
+          },
+          {
+            id: 's2_4',
+            event: 'Đôi dép cao su lốp ô tô đồng hành cùng Bác suốt hai thập kỷ',
+            target: 'Năm 1947 • Chiến khu Việt Bắc',
+            info: 'Được cắt từ lốp xe quân sự Pháp thu được trên mặt trận Bình – Trị – Thiên.'
+          },
+          {
+            id: 's2_5',
+            event: 'Dựng ngôi nhà sàn gỗ đơn sơ bên ao cá để sống và làm việc',
+            target: 'Tháng 05/1958 • Vườn Phủ Chủ tịch',
+            info: 'Kiến trúc nhà sàn mộc mạc mang đậm nét văn hóa đồng bào vùng cao Việt Bắc.'
+          },
+          {
+            id: 's2_6',
+            event: 'Khởi thảo và hoàn thiện bản “Di chúc” thiêng liêng cho dân tộc',
+            target: '1965 – 1969 • Thủ đô Hà Nội',
+            info: 'Văn kiện lịch sử kết tinh tư tưởng, đạo đức và khát vọng hòa bình, thống nhất non sông.'
+          }
+        ]
+      }
+    ];
+
+    const QUICK_QUIZ_QUESTIONS = [
+      {
+        q: 'Người thanh niên Nguyễn Tất Thành rời Bến Nhà Rồng ra đi tìm đường cứu nước vào ngày tháng năm nào?',
+        options: ['19/05/1911', '05/06/1911', '03/02/1920', '28/01/1941'],
+        answerIdx: 1,
+        explain: 'Ngày 05/06/1911, từ Bến Nhà Rồng (Sài Gòn), Nguyễn Tất Thành với tên gọi Văn Ba lên tàu Amiral Latouche-Tréville bắt đầu hành trình 30 năm tìm đường cứu nước.'
+      },
+      {
+        q: 'Danh xưng “Nguyễn Ái Quốc” lần đầu tiên xuất hiện công khai gắn với sự kiện lịch sử nào?',
+        options: [
+          'Thành lập Hội Việt Nam Cách mạng Thanh niên (1925)',
+          'Gửi Bản Yêu sách của nhân dân An Nam tới Hội nghị Versailles (18/06/1919)',
+          'Chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam (03/02/1930)',
+          'Đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình (02/09/1945)'
+        ],
+        answerIdx: 1,
+        explain: 'Ngày 18/06/1919, thay mặt Hội những người Việt Nam yêu nước tại Pháp, Người ký tên Nguyễn Ái Quốc gửi Bản Yêu sách 8 điểm tới Hội nghị Versailles.'
+      },
+      {
+        q: 'Tác phẩm nào tập hợp các bài giảng huấn luyện cán bộ của Nguyễn Ái Quốc tại Quảng Châu và được xuất bản năm 1927?',
+        options: ['Bản án chế độ thực dân Pháp', 'Đường Kách mệnh', 'Nhật ký trong tù', 'Sửa đổi lối làm việc'],
+        answerIdx: 1,
+        explain: '“Đường Kách mệnh” xuất bản đầu năm 1927 tại Quảng Châu, được công nhận là Bảo vật Quốc gia và là cẩm nang lý luận chuẩn bị cho sự ra đời của Đảng.'
+      },
+      {
+        q: 'Sau 30 năm hoạt động ở nước ngoài, Bác Hồ trở về Tổ quốc tại địa danh nào vào ngày 28/01/1941?',
+        options: ['Tân Trào (Tuyên Quang)', 'Pác Bó (Cao Bằng)', 'Định Hóa (Thái Nguyên)', 'Kim Liên (Nghệ An)'],
+        answerIdx: 1,
+        explain: 'Ngày 28/01/1941, Bác Hồ vượt qua cột mốc 108 biên giới Việt – Trung trở về Pác Bó (Hà Quảng, Cao Bằng), trực tiếp lãnh đạo phong trào cách mạng.'
+      },
+      {
+        q: 'Đôi dép cao su giản dị của Chủ tịch Hồ Chí Minh được chế tác từ vật liệu gì vào năm 1947?',
+        options: [
+          'Da thuộc thủ công tại Hà Nội',
+          'Lốp ô tô quân sự của thực dân Pháp thu được ở mặt trận Bình – Trị – Thiên',
+          'Cao su đồn điền miền Đông Nam Bộ gửi tặng',
+          'Nhựa tổng hợp nhập khẩu từ nước ngoài'
+        ],
+        answerIdx: 1,
+        explain: 'Năm 1947 tại Việt Bắc, chiến sĩ cảnh vệ đã cắt chiếc lốp ô tô quân sự của Pháp thu được tại mặt trận Bình – Trị – Thiên để đóng tặng Bác đôi dép cao su.'
+      },
+      {
+        q: 'Trong thời kỳ hoạt động bí mật tại Quảng Châu (1924–1927) và sáng lập Hội Việt Nam Cách mạng Thanh niên, Bác Hồ sử dụng bí danh nào?',
+        options: ['Văn Ba', 'Già Thu', 'Lý Thụy', 'Nguyễn Sinh Cung'],
+        answerIdx: 2,
+        explain: 'Tại Quảng Châu giai đoạn 1924–1927, Người dùng bí danh Lý Thụy để giữ bí mật khi liên lạc quốc tế và mở các lớp đào tạo cán bộ cách mạng.'
+      },
+      {
+        q: 'Chủ tịch Hồ Chí Minh soạn thảo bản Tuyên ngôn Độc lập (tháng 8/1945) tại ngôi nhà số mấy ở Thủ đô Hà Nội?',
+        options: ['Số 48 Hàng Ngang', 'Số 5D Hàm Long', 'Số 90 Thợ Nhuộm', 'Số 35 Hàng Cân'],
+        answerIdx: 0,
+        explain: 'Tại tầng 2 ngôi nhà số 48 Hàng Ngang (Hà Nội), Chủ tịch Hồ Chí Minh đã viết bản Tuyên ngôn Độc lập lịch sử để đọc tại Quảng trường Ba Đình chiều 02/09/1945.'
+      },
+      {
+        q: 'Tập thơ “Nhật ký trong tù” của Hồ Chí Minh được sáng tác bằng ngôn ngữ nào và gồm bao nhiêu bài thơ?',
+        options: [
+          'Tiếng Pháp — 100 bài thơ',
+          'Chữ Quốc ngữ — 120 bài thơ',
+          'Chữ Hán — 133 bài thơ',
+          'Chữ Nôm — 135 bài thơ'
+        ],
+        answerIdx: 2,
+        explain: '“Nhật ký trong tù” gồm 133 bài thơ viết bằng chữ Hán trong cuốn sổ tay nhỏ suốt thời gian Người bị giam giữ qua gần 30 nhà lao ở Quảng Tây (1942–1943).'
+      }
+    ];
+
+    /**
+     * =====================================================================
+     * DỮ LIỆU TAB 04: BÚT DANH & TÊN GỌI (7 TÊN GỌI & BÚT DANH LỊCH SỬ)
+     * =====================================================================
+     */
+    const HISTORICAL_PEN_NAMES = [
+      {
+        id: 'pn1',
+        name: 'Nguyễn Sinh Cung',
+        periodBadge: '1890–1901',
+        roleTag: 'Tên khai sinh',
+        usagePeriod: 'Từ ngày 19/05/1890 đến năm 1901 (Từ thuở ấu thơ đến năm 11 tuổi tại quê hương Nghệ An và kinh đô Huế)',
+        originContext: 'Tên khai sinh do thân phụ là cụ Phó bảng Nguyễn Sinh Sắc và thân mẫu Hoàng Thị Loan đặt cho cậu bé sinh ngày 19/05/1890 tại quê ngoại làng Hoàng Trù, xã Chung Cự, tổng Lâm Thịnh, huyện Nam Đàn, tỉnh Nghệ An.',
+        nameMeaning: 'Chữ “Cung” hàm chứa đức tính cung kính, lễ độ, giữ gìn nếp nhà thanh bạch và đạo lý nhân nghĩa truyền thống của gia đình nhà nho yêu nước xứ Nghệ.',
+        historicalImprint: 'Những năm tháng tuổi thơ lớn lên bên khung cửi của mẹ tại Hoàng Trù – Làng Sen và theo cha vào kinh đô Huế lần thứ nhất, sớm hun đúc lòng thương dân và nỗi trăn trở trước cảnh nước mất nhà tan.',
+        sealTop: 'NGUYỄN',
+        sealBottom: 'SINH CUNG',
+        sealSub: '1890 • LÀNG SEN'
+      },
+      {
+        id: 'pn2',
+        name: 'Nguyễn Tất Thành',
+        periodBadge: '1901–1911',
+        roleTag: 'Tên thời niên thiếu & dạy học',
+        usagePeriod: 'Từ năm 1901 đến tháng 06/1911 (Giai đoạn học tập tại Huế, dạy học tại Phan Thiết và chuẩn bị xuất dương)',
+        originContext: 'Năm 1901, sau khi đỗ Phó bảng và chuẩn bị đưa các con vào kinh đô Huế học tập, theo phong tục xưa của các gia đình khoa bảng, cụ Nguyễn Sinh Sắc đặt cho con trai tên mới là Nguyễn Tất Thành.',
+        nameMeaning: '“Tất Thành” gửi gắm niềm tin và kỳ vọng sâu sắc của người cha rằng người con trai sẽ nuôi chí lớn, bền bỉ vượt qua mọi gian nan để làm nên sự nghiệp cứu nước, ắt sẽ thành công.',
+        historicalImprint: 'Theo học Trường Tiểu học Pháp – Việt Đông Ba và Trường Quốc Học Huế; tham gia phiên dịch cho cuộc biểu tình chống sưu thuế của nông dân Thừa Thiên Huế (1908) và dạy học truyền lòng yêu nước tại Trường Dục Thanh (Phan Thiết, 1910).',
+        sealTop: 'NGUYỄN',
+        sealBottom: 'TẤT THÀNH',
+        sealSub: '1901 • QUỐC HỌC HUẾ'
+      },
+      {
+        id: 'pn3',
+        name: 'Anh Ba / Văn Ba',
+        periodBadge: '1911–1917',
+        roleTag: 'Tên người thanh niên lao động',
+        usagePeriod: 'Từ tháng 06/1911 đến năm 1917 (Những năm đầu bôn ba qua các đại dương, làm việc tại Pháp, Mỹ, Anh)',
+        originContext: 'Ngày 03/06/1911, khi xin làm phụ bếp trên con tàu buôn Pháp Amiral Latouche-Tréville tại thương cảng Sài Gòn để chuẩn bị lên đường tìm đường cứu nước, Người đăng ký tên là Văn Ba (thường gọi thân mật là Anh Ba).',
+        nameMeaning: 'Một cái tên mộc mạc, bình dị của người lao động Việt Nam bình thường, biểu trưng cho tinh thần tự lực tự cường, sẵn sàng lao động bằng chính đôi tay mình để hòa nhập và khảo sát thực tiễn thế giới.',
+        historicalImprint: 'Ngày 05/06/1911 rời Bến Nhà Rồng, đi qua nhiều nước thuộc địa và tư bản phương Tây; làm đủ nghề từ phụ bếp, đốt lò đến cào tuyết tại Mỹ và Anh, nhận ra bản chất chung của chủ nghĩa thực dân đế quốc.',
+        sealTop: 'VĂN BA',
+        sealBottom: 'ANH BA',
+        sealSub: '1911 • NHÀ RỒNG'
+      },
+      {
+        id: 'pn4',
+        name: 'Nguyễn Ái Quốc',
+        periodBadge: '1919–1941',
+        roleTag: 'Danh xưng nhà cách mạng quốc tế',
+        usagePeriod: 'Từ ngày 18/06/1919 đến năm 1941 (Hơn hai thập kỷ hoạt động cách mạng sôi nổi tại Pháp, Liên Xô, Trung Quốc và Việt Nam)',
+        originContext: 'Ngày 18/06/1919, khi thay mặt Hội những người Việt Nam yêu nước tại Pháp gửi Bản Yêu sách 8 điểm tới Hội nghị Hòa bình Versailles, lần đầu tiên tên gọi Nguyễn Ái Quốc xuất hiện công khai trên văn kiện chính thức.',
+        nameMeaning: '“Ái Quốc” nghĩa là yêu nước — khẳng định trực diện tình yêu Tổ quốc nồng nàn và tư cách đại diện cho tiếng nói chính nghĩa của nhân dân Việt Nam trên trường quốc tế.',
+        historicalImprint: 'Bỏ phiếu tán thành Quốc tế III tại Đại hội Tours (1920), sáng lập báo Le Paria (1922), xuất bản Đường Kách mệnh (1927), chủ trì Hội nghị hợp nhất thành lập Đảng Cộng sản Việt Nam (03/02/1930) và lập Mặt trận Việt Minh (1941).',
+        sealTop: 'NGUYỄN',
+        sealBottom: 'ÁI QUỐC',
+        sealSub: '1919 • VERSAILLES'
+      },
+      {
+        id: 'pn5',
+        name: 'Lý Thụy',
+        periodBadge: '1924–1927',
+        roleTag: 'Bí danh hoạt động bí mật',
+        usagePeriod: 'Từ cuối năm 1924 đến năm 1927 (Thời kỳ hoạt động bí mật tại Quảng Châu, Trung Quốc)',
+        originContext: 'Cuối năm 1924, từ Liên Xô tới Quảng Châu (Trung Quốc) để trực tiếp gây dựng tổ chức cách mạng Việt Nam trong vòng vây theo dõi gắt gao của mật thám thực dân Pháp, Người sử dụng bí danh Lý Thụy.',
+        nameMeaning: 'Bí danh ngắn gọn, kín đáo giúp Người giữ bí mật tuyệt đối khi liên lạc với các nhà cách mạng quốc tế và trực tiếp tổ chức các lớp huấn luyện chính trị cho thanh niên yêu nước từ trong nước sang.',
+        historicalImprint: 'Sáng lập Hội Việt Nam Cách mạng Thanh niên (06/1925), ra báo Thanh Niên và trực tiếp giảng dạy các khóa huấn luyện cán bộ tại số nhà 13 (nay là 248–250) đường Văn Minh, Quảng Châu.',
+        sealTop: 'BÍ DANH',
+        sealBottom: 'LÝ THỤY',
+        sealSub: '1924 • QUẢNG CHÂU'
+      },
+      {
+        id: 'pn6',
+        name: 'Già Thu',
+        periodBadge: '1941',
+        roleTag: 'Tên gọi thân thương tại chiến khu',
+        usagePeriod: 'Năm 1941 (Những ngày đầu trở về Tổ quốc sống và làm việc tại căn cứ địa Pác Bó, Cao Bằng)',
+        originContext: 'Khi vượt qua cột mốc 108 trở về Pác Bó (Cao Bằng) đầu năm 1941, sống giản dị trong bộ quần áo chàm cùng đồng bào các dân tộc Tày, Nùng, đồng bào và cán bộ chiến khu gọi Người bằng cái tên trìu mến là “Già Thu” (hoặc Ông Ké).',
+        nameMeaning: 'Thể hiện tình cảm gắn bó ruột thịt giữa vị lãnh tụ cách mạng với đồng bào các dân tộc vùng cao, xóa nhòa mọi khoảng cách và bảo vệ tuyệt đối bí mật của cơ quan đầu não kháng chiến.',
+        historicalImprint: 'Sống và làm việc bên suối Lê-nin, núi Các Mác; chủ trì Hội nghị Trung ương 8 (05/1941) thành lập Mặt trận Việt Minh và trực tiếp chỉ đạo xây dựng lực lượng vũ trang cách mạng.',
+        sealTop: 'CHIẾN KHU',
+        sealBottom: 'GIÀ THU',
+        sealSub: '1941 • PÁC BÓ'
+      },
+      {
+        id: 'pn7',
+        name: 'Hồ Chí Minh',
+        periodBadge: 'Từ 1942',
+        roleTag: 'Tên gọi thiêng liêng của vị Cha già dân tộc',
+        usagePeriod: 'Từ tháng 08/1942 về sau (Suốt sự nghiệp Cách mạng Tháng Tám, kháng chiến kiến quốc và muôn đời sau)',
+        originContext: 'Tháng 08/1942, trên đường từ căn cứ địa Cao Bằng sang Trung Quốc với danh nghĩa đại biểu Việt Minh và Phân hội Quốc tế Phản xâm lược để liên lạc với lực lượng Đồng minh chống phát xít, Người chính thức mang tên Hồ Chí Minh.',
+        nameMeaning: '“Chí Minh” biểu trưng cho ý chí sáng suốt, khát vọng độc lập tự do rạng ngời của cả dân tộc Việt Nam — danh xưng đã đi vào lịch sử nhân loại như biểu tượng của hòa bình, độc lập và giải phóng dân tộc.',
+        historicalImprint: 'Sáng tác tập thơ “Nhật ký trong tù” (1942–1943), lãnh đạo Cách mạng Tháng Tám 1945 thành công, đọc Tuyên ngôn Độc lập tại Ba Đình (02/09/1945), lãnh đạo kháng chiến thắng lợi và để lại bản Di chúc bất hủ.',
+        sealTop: 'CHỦ TỊCH',
+        sealBottom: 'HỒ CHÍ MINH',
+        sealSub: 'TỪ 1942 • VIỆT NAM'
+      }
+    ];
+
+    /**
+     * =====================================================================
+     * QUẢN LÝ TRẠNG THÁI TRONG PHIÊN LÀM VIỆC (KHÔNG DÙNG LOCALSTORAGE)
+     * =====================================================================
+     */
+    let activeTab = 'tab1';
+
+    // Tab 01: Chặng hành trình đang xem (0..5)
+    let currentStopIdx = 0;
+
+    // Tab 02: Hiện vật đang xem ('hv1'..'hv6') & Tab con bên trong thẻ hiện vật
+    let selectedArtifactId = 'hv1';
+    let activeArtifactSubTab = 'origin'; // 'origin' | 'features' | 'value'
+
+    // Tab 03: Thử thách Sử Việt
+    let activeGameMode = 'matching'; // 'matching' | 'quiz'
+    let matchSetIdx = 0;
+    let matchLeftList = [];
+    let matchRightList = [];
+    let selectedLeftId = null;
+    let selectedRightId = null;
+    let matchedIds = [];
+    let wrongFlashIds = [];
+    let lastMatchInsight = '';
+
+    let quizIndex = 0;
+    let quizSelectedOpt = null;
+    let quizScore = 0;
+    let quizFinished = false;
+
+    // Tab 04: Bút danh & Tên gọi đang chọn ('pn1'..'pn7')
+    let selectedPenNameId = 'pn1';
+
+    /**
+     * =====================================================================
+     * THÔNG BÁO TOAST NHẸ NHÀNG (KHÔNG DÙNG ALERT)
+     * =====================================================================
+     */
+    function showToast(message, variant = 'moss') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const styles = {
+        moss: 'bg-[#1B3B2B] text-[#FDFBF7] border-[#B45309]',
+        error: 'bg-[#B91C1C] text-white border-amber-200',
+        cream: 'bg-[#F5F0E6] text-[#1B3B2B] border-[#B45309]'
+      };
+
+      const toast = document.createElement('div');
+      toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border-2 shadow-lg text-xs sm:text-sm font-semibold flex items-center gap-2.5 panel-fade ${styles[variant] || styles.moss}`;
+      toast.innerHTML = `
+        <span class="w-2 h-2 rounded-full bg-[#F59E0B] shrink-0"></span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(6px)';
+        toast.style.transition = 'all 0.25s ease';
+        setTimeout(() => toast.remove(), 260);
+      }, 2800);
+    }
+
+    /**
+     * =====================================================================
+     * THANH ĐIỀU HƯỚNG 4 TAB ĐỘC LẬP
+     * =====================================================================
+     */
+    function renderTabsBar() {
+      const bar = document.getElementById('main-tabs-bar');
+      if (!bar) return;
+
+      bar.innerHTML = TABS.map(t => {
+        const isActive = activeTab === t.id;
+        return `
+          <button type="button" onclick="switchTab('${t.id}')"
+            class="px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all flex items-center gap-2 border ${
+              isActive
+                ? 'bg-[#1B3B2B] text-[#FDFBF7] border-[#1B3B2B] shadow-xs'
+                : 'bg-white/90 text-[#1F2937] border-[#1B3B2B]/15 hover:bg-[#F5F0E6]'
+            }">
+            <span class="text-[11px] px-2 py-0.5 rounded-md font-extrabold ${
+              isActive ? 'bg-[#B45309] text-white' : 'bg-[#F5F0E6] text-[#1B3B2B]'
+            }">${t.num}</span>
+            <span>${t.label}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function switchTab(tabId) {
+      activeTab = tabId;
+      renderTabsBar();
+      renderActiveTab();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderActiveTab() {
+      const viewport = document.getElementById('tab-viewport');
+      if (!viewport) return;
+
+      if (activeTab === 'tab1') renderTab1Journey(viewport);
+      else if (activeTab === 'tab2') renderTab2Artifacts(viewport);
+      else if (activeTab === 'tab3') renderTab3Challenges(viewport);
+      else if (activeTab === 'tab4') renderTab4PenNames(viewport);
+    }
+
+    /**
+     * =====================================================================
+     * MINH HỌA NGHỆ THUẬT SVG VECTOR CHO TAB 01 (6 BƯU THIẾP LỊCH SỬ)
+     * =====================================================================
+     */
+    function getJourneyPostcardSVG(type) {
+      const svgs = {
+        'nha-rong': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <!-- Mặt trời và ngôi sao vàng trên bến cảng -->
+            <circle cx="248" cy="54" r="30" fill="#B45309" opacity="0.18"/>
+            <polygon points="248,33 253,48 269,48 256,57 261,72 248,63 235,72 240,57 227,48 243,48" fill="#B45309"/>
+            <!-- Kiến trúc Bến Nhà Rồng -->
+            <rect x="30" y="92" width="84" height="52" rx="4" fill="#1B3B2B"/>
+            <rect x="42" y="106" width="14" height="24" rx="2" fill="#FDFBF7" opacity="0.85"/>
+            <rect x="65" y="106" width="14" height="24" rx="2" fill="#FDFBF7" opacity="0.85"/>
+            <rect x="88" y="106" width="14" height="24" rx="2" fill="#FDFBF7" opacity="0.85"/>
+            <path d="M22 92 L72 66 L122 92 Z" fill="#B91C1C"/>
+            <circle cx="72" cy="60" r="5" fill="#B45309"/>
+            <!-- Con tàu viễn dương Amiral Latouche-Tréville -->
+            <path d="M128 134 L286 134 L266 164 L144 164 Z" fill="#1B3B2B"/>
+            <rect x="158" y="108" width="90" height="26" rx="4" fill="#28523D"/>
+            <rect x="178" y="84" width="15" height="24" fill="#B91C1C"/>
+            <rect x="206" y="88" width="15" height="20" fill="#B45309"/>
+            <path d="M185 78 Q198 66 216 70" stroke="#1F2937" stroke-width="2" fill="none" opacity="0.35" stroke-linecap="round"/>
+            <!-- Sóng sông Sài Gòn -->
+            <path d="M20 174 Q62 164 104 174 T188 174 T272 174 T302 174" stroke="#1B3B2B" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M36 188 Q82 178 128 188 T220 188 T288 188" stroke="#B45309" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </svg>`,
+        'versailles': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <circle cx="160" cy="110" r="82" stroke="#B45309" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+            <!-- Cuộn Bản Yêu sách của nhân dân An Nam -->
+            <rect x="86" y="42" width="148" height="136" rx="8" fill="#FDFBF7" stroke="#1B3B2B" stroke-width="2.5"/>
+            <rect x="74" y="35" width="172" height="15" rx="7.5" fill="#B45309"/>
+            <rect x="74" y="170" width="172" height="15" rx="7.5" fill="#B45309"/>
+            <line x1="108" y1="72" x2="212" y2="72" stroke="#B91C1C" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="108" y1="92" x2="204" y2="92" stroke="#1B3B2B" stroke-width="2.2" opacity="0.65"/>
+            <line x1="108" y1="110" x2="208" y2="110" stroke="#1B3B2B" stroke-width="2.2" opacity="0.65"/>
+            <line x1="108" y1="128" x2="176" y2="128" stroke="#1B3B2B" stroke-width="2.2" opacity="0.65"/>
+            <line x1="108" y1="146" x2="164" y2="146" stroke="#1B3B2B" stroke-width="2.2" opacity="0.65"/>
+            <!-- Triện dấu Nguyễn Ái Quốc -->
+            <circle cx="196" cy="144" r="14" fill="#B91C1C"/>
+            <polygon points="196,135 198.5,141 205,141 199.8,145 201.8,151 196,147.5 190.2,151 192.2,145 187,141 193.5,141" fill="#FDE68A"/>
+          </svg>`,
+        'tours': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <!-- Trang báo L'Humanité đăng Sơ thảo Luận cương Lê-nin -->
+            <rect x="58" y="40" width="122" height="140" rx="8" fill="#FDFBF7" stroke="#1B3B2B" stroke-width="2.5"/>
+            <rect x="72" y="54" width="94" height="18" rx="3" fill="#1B3B2B"/>
+            <text x="119" y="67" text-anchor="middle" fill="#FDE68A" font-family="Merriweather, serif" font-weight="900" font-size="9">L'HUMANITÉ</text>
+            <line x1="72" y1="86" x2="166" y2="86" stroke="#B91C1C" stroke-width="2.8"/>
+            <line x1="72" y1="104" x2="160" y2="104" stroke="#1F2937" stroke-width="2" opacity="0.55"/>
+            <line x1="72" y1="120" x2="164" y2="120" stroke="#1F2937" stroke-width="2" opacity="0.55"/>
+            <line x1="72" y1="136" x2="146" y2="136" stroke="#1F2937" stroke-width="2" opacity="0.55"/>
+            <line x1="72" y1="152" x2="156" y2="152" stroke="#1F2937" stroke-width="2" opacity="0.55"/>
+            <!-- Huy hiệu chân lý cách mạng tỏa sáng -->
+            <circle cx="224" cy="110" r="48" fill="#1B3B2B" stroke="#B45309" stroke-width="3"/>
+            <circle cx="224" cy="110" r="38" stroke="#FDE68A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+            <polygon points="224,76 232.5,100 258,100 237.5,115 245,139 224,124 203,139 210.5,115 190,100 215.5,100" fill="#F59E0B"/>
+          </svg>`,
+        'dang-1930': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <!-- Biểu tượng Trống đồng Đông Sơn & Sao vàng mùa xuân 1930 -->
+            <circle cx="160" cy="110" r="78" fill="#1B3B2B"/>
+            <circle cx="160" cy="110" r="66" stroke="#B45309" stroke-width="2.2" stroke-dasharray="6 4" fill="none"/>
+            <circle cx="160" cy="110" r="52" stroke="#FDE68A" stroke-width="1.4" fill="none" opacity="0.75"/>
+            <polygon points="160,60 173,94 209,94 180,115 191,149 160,128 129,149 140,115 111,94 147,94" fill="#B91C1C" stroke="#FDE68A" stroke-width="1.8"/>
+          </svg>`,
+        'pac-bo': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <circle cx="242" cy="52" r="24" fill="#B45309" opacity="0.22"/>
+            <!-- Núi Các Mác & Suối Lê-nin Pác Bó -->
+            <polygon points="34,162 118,56 202,162" fill="#1B3B2B"/>
+            <polygon points="132,162 206,72 284,162" fill="#28523D"/>
+            <path d="M118 56 L102 82 L118 76 L134 82 Z" fill="#FDFBF7" opacity="0.3"/>
+            <path d="M24 172 Q92 160 160 172 T296 172" stroke="#1B3B2B" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M42 186 Q112 176 182 186 T280 186" stroke="#B45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <polygon points="118,32 121.5,42 132,42 123.5,48 126.5,58 118,52 109.5,58 112.5,48 104,42 114.5,42" fill="#B91C1C"/>
+          </svg>`,
+        'ba-dinh': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <rect width="320" height="220" rx="16" fill="#F5F0E6"/>
+            <circle cx="160" cy="92" r="64" fill="#B45309" opacity="0.16"/>
+            <!-- Lễ đài Độc lập Ba Đình & Cờ đỏ sao vàng tung bay -->
+            <rect x="158" y="32" width="4" height="104" fill="#1B3B2B"/>
+            <path d="M162 34 L234 34 L234 78 L162 78 Z" fill="#B91C1C"/>
+            <polygon points="198,43 201.5,53 212,53 203.5,59 206.5,69 198,63 189.5,69 192.5,59 184,53 194.5,53" fill="#FDE68A"/>
+            <rect x="88" y="136" width="144" height="24" rx="3" fill="#1B3B2B"/>
+            <rect x="68" y="160" width="184" height="20" rx="3" fill="#B45309"/>
+          </svg>`
+      };
+      return svgs[type] || svgs['ba-dinh'];
+    }
+
+    /**
+     * =====================================================================
+     * RENDER TAB 01: HÀNH TRÌNH CỨU NƯỚC (1911–1945)
+     * =====================================================================
+     */
+    function selectJourneyStop(idx) {
+      currentStopIdx = idx;
+      renderTab1Journey(document.getElementById('tab-viewport'));
+    }
+
+    function renderTab1Journey(container) {
+      if (!container) return;
+      const stop = JOURNEY_STOPS[currentStopIdx] || JOURNEY_STOPS[0];
+
+      container.innerHTML = `
+        <section class="space-y-6 panel-fade">
+          <!-- Tiêu đề chương -->
+          <div class="border-b border-[#1B3B2B]/15 pb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#B45309]">CHƯƠNG 01 • BIÊN NIÊN SỬ 1911 – 1945</span>
+            <h2 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] mt-1">
+              Hành Trình Cứu Nước &amp; Khai Sinh Độc Lập
+            </h2>
+          </div>
+
+          <!-- Thanh chọn 6 chặng dừng lịch sử -->
+          <div class="bg-white rounded-2xl border border-[#1B3B2B]/15 p-3.5 sm:p-5 shadow-2xs">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+              ${JOURNEY_STOPS.map((item, idx) => {
+                const isSelected = idx === currentStopIdx;
+                return `
+                  <button type="button" onclick="selectJourneyStop(${idx})"
+                    class="text-left p-3 rounded-xl border-2 transition-all flex flex-col justify-between gap-1.5 ${
+                      isSelected
+                        ? 'bg-[#1B3B2B] text-[#FDFBF7] border-[#B45309] shadow-sm'
+                        : 'bg-[#F5F0E6]/75 text-[#1F2937] border-[#1B3B2B]/12 hover:border-[#B45309] hover:bg-[#F5F0E6]'
+                    }">
+                    <div class="flex items-center justify-between gap-1">
+                      <span class="font-editorial text-sm sm:text-base font-black ${isSelected ? 'text-[#FDE68A]' : 'text-[#B91C1C]'}">
+                        ${item.year}
+                      </span>
+                      <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                        isSelected ? 'bg-[#B45309] text-white' : 'bg-white text-[#1B3B2B]'
+                      }">
+                        Chặng 0${item.id}
+                      </span>
+                    </div>
+                    <span class="text-xs font-semibold leading-snug line-clamp-2 ${isSelected ? 'text-[#FDFBF7]' : 'text-[#1F2937]'}">
+                      ${item.shortPlace}
+                    </span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <!-- Bưu Thiếp Lịch Sử (Historical Postcard) khổ lớn -->
+          <article class="postcard-frame rounded-3xl p-5 sm:p-8 panel-fade">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <!-- Cột trái: Minh họa SVG vector & Con dấu bưu điện -->
+              <div class="lg:col-span-5 space-y-3">
+                <div class="aspect-10/7 w-full rounded-2xl overflow-hidden border border-[#1B3B2B]/15 shadow-xs">
+                  ${getJourneyPostcardSVG(stop.artType)}
+                </div>
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#F5F0E6] border border-dashed border-[#B45309]/65 text-[11px] font-bold">
+                  <span class="text-[#1B3B2B] uppercase tracking-wider">CON DẤU THỜI GIAN</span>
+                  <span class="text-[#B91C1C] tracking-wide">${stop.postmark}</span>
+                </div>
+              </div>
+
+              <!-- Cột phải: Bối cảnh lịch sử & Trích dẫn nguyên văn -->
+              <div class="lg:col-span-7 space-y-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-[#B91C1C] text-white text-xs font-bold tracking-wide">
+                    Mốc ${stop.year}
+                  </span>
+                  <span class="text-xs sm:text-sm font-bold text-[#B45309]">
+                    ${stop.fullPlace}
+                  </span>
+                </div>
+
+                <h3 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] leading-snug">
+                  ${stop.title}
+                </h3>
+
+                <p class="text-sm sm:text-base text-[#1F2937] leading-relaxed">
+                  ${stop.context}
+                </p>
+
+                <blockquote class="p-4 rounded-2xl bg-[#FDFBF7] border-l-4 border-[#B91C1C] space-y-1">
+                  <p class="font-editorial italic text-xs sm:text-sm text-[#1B3B2B] font-bold leading-relaxed">
+                    ${stop.quote}
+                  </p>
+                  <footer class="text-[11px] font-semibold text-[#B45309]">
+                    — ${stop.quoteSource}
+                  </footer>
+                </blockquote>
+
+                <div class="p-4 rounded-2xl bg-[#F5F0E6] border-l-4 border-[#1B3B2B] text-xs sm:text-sm text-[#1F2937] leading-relaxed">
+                  <strong class="text-[#1B3B2B] font-extrabold block mb-1 uppercase tracking-wider text-[11px]">
+                    Ý nghĩa bước ngoặt:
+                  </strong>
+                  <span>${stop.significance}</span>
+                </div>
+
+                <!-- 2 nút chuyển Chặng trước / Chặng tiếp theo -->
+                <div class="pt-3 flex items-center justify-between gap-3 border-t border-[#1B3B2B]/10">
+                  <button type="button"
+                    onclick="selectJourneyStop(${Math.max(0, currentStopIdx - 1)})"
+                    ${currentStopIdx === 0 ? 'disabled' : ''}
+                    class="px-4 py-2.5 rounded-xl border border-[#1B3B2B]/25 text-xs sm:text-sm font-bold text-[#1B3B2B] hover:bg-[#F5F0E6] disabled:opacity-40 disabled:pointer-events-none transition-colors">
+                    ← Chặng trước
+                  </button>
+
+                  <span class="text-xs font-bold text-[#1F2937]/70">
+                    Chặng ${currentStopIdx + 1} / ${JOURNEY_STOPS.length}
+                  </span>
+
+                  <button type="button"
+                    onclick="selectJourneyStop(${Math.min(JOURNEY_STOPS.length - 1, currentStopIdx + 1)})"
+                    ${currentStopIdx === JOURNEY_STOPS.length - 1 ? 'disabled' : ''}
+                    class="px-4 py-2.5 rounded-xl bg-[#1B3B2B] hover:bg-[#12291E] text-[#FDFBF7] text-xs sm:text-sm font-bold disabled:opacity-40 disabled:pointer-events-none transition-colors">
+                    Chặng tiếp theo →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      `;
+    }
+
+    /**
+     * =====================================================================
+     * MINH HỌA SVG VECTOR CỠ LỚN CHO TAB 02 (6 HIỆN VẬT BẢO TÀNG)
+     * =====================================================================
+     */
+    function getArtifactSVG(type) {
+      const svgs = {
+        sandals: `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <ellipse cx="160" cy="184" rx="112" ry="18" fill="#1B3B2B" opacity="0.12"/>
+            <!-- Chiếc dép trái -->
+            <g transform="translate(88, 32) rotate(-8)">
+              <rect x="0" y="0" width="54" height="134" rx="26" fill="#1F2937" stroke="#B45309" stroke-width="2.5"/>
+              <rect x="7" y="8" width="40" height="118" rx="20" fill="#2D3748"/>
+              <path d="M12 28 L27 22 L42 28 M12 46 L27 40 L42 46 M12 88 L27 82 L42 88 M12 106 L27 100 L42 106" stroke="#4A5568" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M4 42 Q27 28 50 42 L50 56 Q27 42 4 56 Z" fill="#1B3B2B" stroke="#B45309" stroke-width="1.5"/>
+              <path d="M4 76 Q27 64 50 76 L50 88 Q27 76 4 88 Z" fill="#1B3B2B" stroke="#B45309" stroke-width="1.5"/>
+            </g>
+            <!-- Chiếc dép phải -->
+            <g transform="translate(174, 26) rotate(8)">
+              <rect x="0" y="0" width="54" height="134" rx="26" fill="#1F2937" stroke="#B45309" stroke-width="2.5"/>
+              <rect x="7" y="8" width="40" height="118" rx="20" fill="#2D3748"/>
+              <path d="M12 28 L27 22 L42 28 M12 46 L27 40 L42 46 M12 88 L27 82 L42 88 M12 106 L27 100 L42 106" stroke="#4A5568" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M4 42 Q27 28 50 42 L50 56 Q27 42 4 56 Z" fill="#1B3B2B" stroke="#B45309" stroke-width="1.5"/>
+              <path d="M4 76 Q27 64 50 76 L50 88 Q27 76 4 88 Z" fill="#1B3B2B" stroke="#B45309" stroke-width="1.5"/>
+            </g>
+          </svg>`,
+        typewriter: `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <ellipse cx="160" cy="188" rx="116" ry="16" fill="#1B3B2B" opacity="0.12"/>
+            <!-- Tờ giấy đánh máy -->
+            <rect x="104" y="22" width="112" height="66" rx="4" fill="#FDFBF7" stroke="#1B3B2B" stroke-width="2"/>
+            <line x1="118" y1="38" x2="202" y2="38" stroke="#B91C1C" stroke-width="2.2"/>
+            <line x1="118" y1="50" x2="196" y2="50" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="118" y1="62" x2="184" y2="62" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <!-- Trục lăn giấy -->
+            <rect x="76" y="72" width="168" height="14" rx="6" fill="#1F2937"/>
+            <rect x="64" y="75" width="12" height="8" rx="2" fill="#B45309"/>
+            <rect x="244" y="75" width="12" height="8" rx="2" fill="#B45309"/>
+            <!-- Thân máy chữ Hermes Baby -->
+            <path d="M74 86 L246 86 L258 168 Q258 176 248 176 L72 176 Q62 176 62 168 Z" fill="#1B3B2B" stroke="#B45309" stroke-width="2.5"/>
+            <rect x="122" y="96" width="76" height="14" rx="4" fill="#F5F0E6"/>
+            <!-- Các phím bấm cơ học -->
+            <g fill="#FDFBF7" stroke="#B45309" stroke-width="1">
+              <circle cx="94" cy="126" r="6"/><circle cx="112" cy="126" r="6"/><circle cx="130" cy="126" r="6"/><circle cx="148" cy="126" r="6"/><circle cx="166" cy="126" r="6"/><circle cx="184" cy="126" r="6"/><circle cx="202" cy="126" r="6"/><circle cx="220" cy="126" r="6"/>
+              <circle cx="102" cy="142" r="6"/><circle cx="120" cy="142" r="6"/><circle cx="138" cy="142" r="6"/><circle cx="156" cy="142" r="6"/><circle cx="174" cy="142" r="6"/><circle cx="192" cy="142" r="6"/><circle cx="210" cy="142" r="6"/>
+            </g>
+            <rect x="114" y="156" width="92" height="9" rx="4.5" fill="#B45309"/>
+          </svg>`,
+        suit: `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <ellipse cx="160" cy="192" rx="95" ry="14" fill="#1B3B2B" opacity="0.12"/>
+            <!-- Giá trưng bày bảo tàng -->
+            <rect x="156" y="18" width="8" height="170" fill="#B45309"/>
+            <path d="M104 46 Q160 28 216 46" stroke="#1B3B2B" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Bộ quần áo Kaki bạc màu bốn túi -->
+            <path d="M104 46 L76 128 L98 134 L114 82 L114 166 L206 166 L206 82 L222 134 L244 128 L216 46 L180 38 L160 52 L140 38 Z"
+              fill="#DFD3BE" stroke="#1B3B2B" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M140 38 L160 50 L180 38 L176 48 L160 58 L144 48 Z" fill="#CFC0A6" stroke="#1B3B2B" stroke-width="1.5"/>
+            <line x1="160" y1="58" x2="160" y2="166" stroke="#1B3B2B" stroke-width="1.8"/>
+            <circle cx="160" cy="74" r="2.5" fill="#B45309"/>
+            <circle cx="160" cy="96" r="2.5" fill="#B45309"/>
+            <circle cx="160" cy="118" r="2.5" fill="#B45309"/>
+            <circle cx="160" cy="140" r="2.5" fill="#B45309"/>
+            <rect x="124" y="72" width="24" height="26" rx="3" fill="#D5C7B0" stroke="#1B3B2B" stroke-width="1.5"/>
+            <rect x="172" y="72" width="24" height="26" rx="3" fill="#D5C7B0" stroke="#1B3B2B" stroke-width="1.5"/>
+            <rect x="122" y="114" width="28" height="34" rx="3" fill="#D5C7B0" stroke="#1B3B2B" stroke-width="1.5"/>
+            <rect x="170" y="114" width="28" height="34" rx="3" fill="#D5C7B0" stroke="#1B3B2B" stroke-width="1.5"/>
+          </svg>`,
+        newspaper: `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <ellipse cx="160" cy="192" rx="108" ry="14" fill="#1B3B2B" opacity="0.12"/>
+            <!-- Tờ báo Le Paria (Người Cùng Khổ) -->
+            <rect x="74" y="22" width="172" height="164" rx="6" fill="#FDFBF7" stroke="#1B3B2B" stroke-width="2.5"/>
+            <rect x="86" y="32" width="148" height="30" rx="3" fill="#1B3B2B"/>
+            <text x="160" y="52" text-anchor="middle" fill="#FDE68A" font-family="Merriweather, serif" font-weight="900" font-size="16" letter-spacing="2">LE PARIA</text>
+            <line x1="86" y1="70" x2="234" y2="70" stroke="#B91C1C" stroke-width="2.5"/>
+            <rect x="86" y="78" width="44" height="44" rx="2" fill="#B91C1C" opacity="0.18" stroke="#B91C1C" stroke-width="1.2"/>
+            <line x1="86" y1="132" x2="130" y2="132" stroke="#1F2937" stroke-width="2" opacity="0.65"/>
+            <line x1="86" y1="144" x2="130" y2="144" stroke="#1F2937" stroke-width="2" opacity="0.65"/>
+            <line x1="86" y1="156" x2="122" y2="156" stroke="#1F2937" stroke-width="2" opacity="0.65"/>
+            <line x1="138" y1="82" x2="182" y2="82" stroke="#1B3B2B" stroke-width="2.5"/>
+            <line x1="138" y1="94" x2="182" y2="94" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="138" y1="106" x2="182" y2="106" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="138" y1="118" x2="182" y2="118" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="138" y1="132" x2="182" y2="132" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="138" y1="144" x2="182" y2="144" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="138" y1="156" x2="176" y2="156" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="190" y1="82" x2="234" y2="82" stroke="#1B3B2B" stroke-width="2.5"/>
+            <line x1="190" y1="94" x2="234" y2="94" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="190" y1="106" x2="234" y2="106" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="190" y1="118" x2="234" y2="118" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="190" y1="132" x2="234" y2="132" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+            <line x1="190" y1="144" x2="234" y2="144" stroke="#1F2937" stroke-width="1.8" opacity="0.6"/>
+          </svg>`,
+        'stilt-house': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <!-- Tán cây vườn Phủ Chủ tịch -->
+            <circle cx="66" cy="78" r="34" fill="#1B3B2B" opacity="0.22"/>
+            <circle cx="254" cy="74" r="38" fill="#1B3B2B" opacity="0.22"/>
+            <!-- Mái ngói nhà sàn -->
+            <polygon points="74,78 160,34 246,78" fill="#B91C1C" stroke="#1B3B2B" stroke-width="2"/>
+            <polygon points="88,78 160,42 232,78" fill="#991B1B"/>
+            <!-- Tầng trên bằng gỗ mộc -->
+            <rect x="92" y="78" width="136" height="44" fill="#B45309" stroke="#1B3B2B" stroke-width="2"/>
+            <rect x="112" y="88" width="22" height="24" rx="2" fill="#FDE68A" stroke="#1B3B2B" stroke-width="1.5"/>
+            <rect x="149" y="88" width="22" height="24" rx="2" fill="#FDE68A" stroke="#1B3B2B" stroke-width="1.5"/>
+            <rect x="186" y="88" width="22" height="24" rx="2" fill="#FDE68A" stroke="#1B3B2B" stroke-width="1.5"/>
+            <!-- Cột nhà sàn -->
+            <rect x="98" y="122" width="8" height="42" fill="#1B3B2B"/>
+            <rect x="136" y="122" width="8" height="42" fill="#1B3B2B"/>
+            <rect x="176" y="122" width="8" height="42" fill="#1B3B2B"/>
+            <rect x="214" y="122" width="8" height="42" fill="#1B3B2B"/>
+            <!-- Mặt nước ao cá -->
+            <path d="M36 172 Q98 164 160 172 T284 172" stroke="#1B3B2B" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M62 186 Q116 178 170 186 T262 186" stroke="#B45309" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </svg>`,
+        'book-1927': `
+          <svg viewBox="0 0 320 220" class="w-full h-full">
+            <ellipse cx="160" cy="192" rx="98" ry="14" fill="#1B3B2B" opacity="0.12"/>
+            <!-- Tác phẩm Đường Kách Mệnh -->
+            <rect x="96" y="24" width="128" height="160" rx="8" fill="#F5F0E6" stroke="#1B3B2B" stroke-width="2.8"/>
+            <rect x="96" y="24" width="14" height="160" rx="3" fill="#1B3B2B"/>
+            <rect x="122" y="40" width="90" height="128" rx="4" fill="none" stroke="#B45309" stroke-width="1.5"/>
+            <text x="167" y="70" text-anchor="middle" fill="#B91C1C" font-family="Merriweather, serif" font-weight="900" font-size="13">ĐƯỜNG</text>
+            <text x="167" y="90" text-anchor="middle" fill="#B91C1C" font-family="Merriweather, serif" font-weight="900" font-size="13">KÁCH MỆNH</text>
+            <line x1="138" y1="102" x2="196" y2="102" stroke="#B45309" stroke-width="1.5"/>
+            <polygon points="167,114 171,124 182,124 173,130 176,140 167,134 158,140 161,130 152,124 163,124" fill="#B45309"/>
+            <text x="167" y="158" text-anchor="middle" fill="#1B3B2B" font-family="Be Vietnam Pro, sans-serif" font-weight="700" font-size="10">1927</text>
+          </svg>`
+      };
+      return svgs[type] || svgs.sandals;
+    }
+
+    /**
+     * =====================================================================
+     * RENDER TAB 02: PHÒNG TRƯNG BÀY KỶ VẬT
+     * =====================================================================
+     */
+    function selectArtifact(artifactId) {
+      selectedArtifactId = artifactId;
+      activeArtifactSubTab = 'origin';
+      renderTab2Artifacts(document.getElementById('tab-viewport'));
+    }
+
+    function setArtifactSubTab(subTab) {
+      activeArtifactSubTab = subTab;
+      renderTab2Artifacts(document.getElementById('tab-viewport'));
+    }
+
+    function renderTab2Artifacts(container) {
+      if (!container) return;
+
+      const currentArt = MUSEUM_ARTIFACTS.find(a => a.id === selectedArtifactId) || MUSEUM_ARTIFACTS[0];
+
+      const subTabs = [
+        { id: 'origin', label: 'Câu chuyện ra đời', content: currentArt.originStory },
+        { id: 'features', label: 'Chi tiết đặc trưng', content: currentArt.features },
+        { id: 'value', label: 'Giá trị biểu tượng', content: currentArt.symbolicValue }
+      ];
+      const activeSubObj = subTabs.find(s => s.id === activeArtifactSubTab) || subTabs[0];
+
+      container.innerHTML = `
+        <section class="space-y-6 panel-fade">
+          <!-- Tiêu đề Phòng Trưng Bày -->
+          <div class="border-b border-[#1B3B2B]/15 pb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#B45309]">CHƯƠNG 02 • KHÔNG GIAN BẢO TÀNG SỐ</span>
+            <h2 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] mt-1">
+              Phòng Trưng Bày Kỷ Vật
+            </h2>
+          </div>
+
+          <!-- Bố cục 2 cột: Danh sách chọn 6 hiện vật — Khung Tủ Kính Trưng Bày -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Cột trái: Danh sách 6 hiện vật bảo tàng -->
+            <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+              ${MUSEUM_ARTIFACTS.map(art => {
+                const selected = art.id === currentArt.id;
+                return `
+                  <button type="button" onclick="selectArtifact('${art.id}')"
+                    class="text-left p-3.5 rounded-2xl border-2 transition-all flex items-center gap-3.5 ${
+                      selected
+                        ? 'bg-[#1B3B2B] text-[#FDFBF7] border-[#B45309] shadow-md'
+                        : 'bg-white text-[#1F2937] border-[#1B3B2B]/14 hover:border-[#B45309] shadow-2xs'
+                    }">
+                    <div class="w-16 h-12 rounded-xl overflow-hidden shrink-0 border ${
+                      selected ? 'bg-[#FDFBF7] border-[#B45309]' : 'bg-[#F5F0E6] border-[#1B3B2B]/12'
+                    }">
+                      ${getArtifactSVG(art.svgType)}
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <span class="inline-block text-[11px] font-extrabold tracking-wider px-2 py-0.5 rounded ${
+                        selected ? 'bg-[#B45309] text-white' : 'bg-[#F5F0E6] text-[#B91C1C]'
+                      }">
+                        ${art.code} • ${art.year}
+                      </span>
+                      <div class="font-editorial text-sm sm:text-[15px] font-bold mt-1 leading-snug truncate ${
+                        selected ? 'text-[#FDFBF7]' : 'text-[#1B3B2B]'
+                      }">
+                        ${art.name}
+                      </div>
+                    </div>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Cột phải: Khung Tủ Kính Trưng Bày (Museum Glass Display) -->
+            <article class="lg:col-span-7 rounded-3xl bg-white border-2 border-[#1B3B2B]/18 p-5 sm:p-7 shadow-sm space-y-5 panel-fade">
+              <!-- Tủ kính trưng bày SVG cỡ lớn -->
+              <div class="museum-vitrine rounded-2xl p-4 sm:p-6">
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="px-3 py-1 rounded-full bg-[#1B3B2B] text-[#FDE68A] text-xs font-extrabold tracking-wider">
+                    HIỆN VẬT ${currentArt.code}
+                  </span>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-[#B45309]">
+                    Tủ Kính Trưng Bày
+                  </span>
+                </div>
+                <div class="h-44 sm:h-52 w-full max-w-md mx-auto">
+                  ${getArtifactSVG(currentArt.svgType)}
+                </div>
+              </div>
+
+              <!-- Tiêu đề & 3 thẻ thông tin bảo tàng -->
+              <div class="space-y-3">
+                <h3 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] leading-snug">
+                  ${currentArt.name}
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <div class="p-3 rounded-xl bg-[#F5F0E6] border border-[#1B3B2B]/10">
+                    <span class="block text-[10px] font-bold uppercase tracking-wider text-[#B45309]">Niên đại</span>
+                    <span class="block text-xs sm:text-sm font-bold text-[#1B3B2B] mt-0.5">${currentArt.year}</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-[#F5F0E6] border border-[#1B3B2B]/10">
+                    <span class="block text-[10px] font-bold uppercase tracking-wider text-[#B45309]">Chất liệu</span>
+                    <span class="block text-xs sm:text-sm font-bold text-[#1B3B2B] mt-0.5">${currentArt.material}</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-[#F5F0E6] border border-[#1B3B2B]/10">
+                    <span class="block text-[10px] font-bold uppercase tracking-wider text-[#B45309]">Nơi lưu giữ</span>
+                    <span class="block text-xs sm:text-sm font-bold text-[#1B3B2B] mt-0.5">${currentArt.location}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 Tab con tương tác bên trong thẻ hiện vật -->
+              <div class="space-y-3 pt-1">
+                <div class="flex flex-wrap gap-1.5 bg-[#F5F0E6] p-1.5 rounded-2xl border border-[#1B3B2B]/12">
+                  ${subTabs.map(st => {
+                    const active = st.id === activeArtifactSubTab;
+                    return `
+                      <button type="button" onclick="setArtifactSubTab('${st.id}')"
+                        class="flex-1 min-w-[125px] px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                          active
+                            ? 'bg-[#B91C1C] text-white shadow-2xs'
+                            : 'text-[#1B3B2B] hover:bg-white/75'
+                        }">
+                        ${st.label}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-2xl bg-[#FDFBF7] border border-[#B45309]/30 text-sm sm:text-base text-[#1F2937] leading-relaxed panel-fade">
+                  ${activeSubObj.content}
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      `;
+    }
+
+    /**
+     * =====================================================================
+     * RENDER TAB 03: THỬ THÁCH SỬ VIỆT (NỐI MỐC LỊCH SỬ & TRẮC NGHIỆM 8 CÂU)
+     * =====================================================================
+     */
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function initMatchingGame(switchSet = false) {
+      if (switchSet) {
+        matchSetIdx = (matchSetIdx + 1) % MATCHING_SETS.length;
+      }
+      const currentSet = MATCHING_SETS[matchSetIdx];
+      matchLeftList = shuffleArray(currentSet.pairs.map(p => ({ id: p.id, text: p.event })));
+      matchRightList = shuffleArray(currentSet.pairs.map(p => ({ id: p.id, text: p.target })));
+      selectedLeftId = null;
+      selectedRightId = null;
+      matchedIds = [];
+      wrongFlashIds = [];
+      lastMatchInsight = '';
+    }
+
+    function switchGameMode(mode) {
+      activeGameMode = mode;
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function handleSelectLeft(id) {
+      if (matchedIds.includes(id)) return;
+      selectedLeftId = selectedLeftId === id ? null : id;
+      checkMatchingPair();
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function handleSelectRight(id) {
+      if (matchedIds.includes(id)) return;
+      selectedRightId = selectedRightId === id ? null : id;
+      checkMatchingPair();
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function checkMatchingPair() {
+      if (!selectedLeftId || !selectedRightId) return;
+
+      if (selectedLeftId === selectedRightId) {
+        const pairObj = MATCHING_SETS[matchSetIdx].pairs.find(p => p.id === selectedLeftId);
+        matchedIds.push(selectedLeftId);
+        lastMatchInsight = pairObj ? `${pairObj.event} (${pairObj.target}): ${pairObj.info}` : '';
+        selectedLeftId = null;
+        selectedRightId = null;
+        showToast('Chính xác! Cặp sự kiện và mốc lịch sử đã trùng khớp.', 'moss');
+      } else {
+        const lId = selectedLeftId;
+        const rId = selectedRightId;
+        wrongFlashIds = [lId, rId];
+        selectedLeftId = null;
+        selectedRightId = null;
+        showToast('Chưa trùng khớp thời gian hoặc địa điểm — Hãy thử ghép lại nhé!', 'error');
+
+        setTimeout(() => {
+          wrongFlashIds = [];
+          if (activeTab === 'tab3' && activeGameMode === 'matching') {
+            renderTab3Challenges(document.getElementById('tab-viewport'));
+          }
+        }, 480);
+      }
+    }
+
+    function restartMatchingGame(switchSet) {
+      initMatchingGame(switchSet);
+      showToast(switchSet ? `Đã chuyển sang ${MATCHING_SETS[matchSetIdx].title}` : 'Đã xáo trộn lại bảng nối mốc lịch sử!', 'cream');
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function selectQuizOption(optIdx) {
+      if (quizSelectedOpt !== null) return;
+      quizSelectedOpt = optIdx;
+      const q = QUICK_QUIZ_QUESTIONS[quizIndex];
+      if (optIdx === q.answerIdx) {
+        quizScore += 1;
+        showToast('Đáp án chính xác!', 'moss');
+      } else {
+        showToast('Chưa đúng — Xem giải thích kiến thức bên dưới nhé!', 'error');
+      }
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function nextQuizQuestion() {
+      if (quizIndex < QUICK_QUIZ_QUESTIONS.length - 1) {
+        quizIndex += 1;
+        quizSelectedOpt = null;
+      } else {
+        quizFinished = true;
+      }
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function resetQuizGame() {
+      quizIndex = 0;
+      quizSelectedOpt = null;
+      quizScore = 0;
+      quizFinished = false;
+      renderTab3Challenges(document.getElementById('tab-viewport'));
+    }
+
+    function renderTab3Challenges(container) {
+      if (!container) return;
+      const currentSet = MATCHING_SETS[matchSetIdx];
+
+      container.innerHTML = `
+        <section class="space-y-6 panel-fade">
+          <!-- Tiêu đề & Nút chuyển đổi 2 chế độ chơi -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#1B3B2B]/15 pb-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-[#B45309]">CHƯƠNG 03 • ÔN TẬP KIẾN THỨC TƯƠNG TÁC</span>
+              <h2 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] mt-1">
+                Thử Thách Sử Việt
+              </h2>
+            </div>
+
+            <div class="inline-flex p-1.5 rounded-2xl bg-[#F5F0E6] border border-[#1B3B2B]/15 self-start md:self-auto">
+              <button type="button" onclick="switchGameMode('matching')"
+                class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                  activeGameMode === 'matching'
+                    ? 'bg-[#1B3B2B] text-[#FDFBF7] shadow-xs'
+                    : 'text-[#1F2937] hover:bg-white/75'
+                }">
+                Chế độ 1: Nối Mốc Lịch Sử
+              </button>
+              <button type="button" onclick="switchGameMode('quiz')"
+                class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                  activeGameMode === 'quiz'
+                    ? 'bg-[#1B3B2B] text-[#FDFBF7] shadow-xs'
+                    : 'text-[#1F2937] hover:bg-white/75'
+                }">
+                Chế độ 2: Trắc Nghiệm Nhanh
+              </button>
+            </div>
+          </div>
+
+          ${activeGameMode === 'matching' ? `
+            <!-- CHẾ ĐỘ 1: NỐI MỐC LỊCH SỬ -->
+            <div class="bg-white rounded-3xl border border-[#1B3B2B]/15 p-5 sm:p-7 shadow-2xs space-y-5 panel-fade">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#1B3B2B]/10">
+                <div>
+                  <span class="text-xs font-bold text-[#B45309] uppercase">${currentSet.title}</span>
+                  <p class="text-xs sm:text-sm text-[#1F2937]/80 mt-0.5">
+                    Chạm chọn <strong>1 sự kiện lịch sử</strong> ở cột trái và <strong>1 mốc thời gian / địa điểm</strong> tương ứng ở cột phải.
+                  </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 shrink-0">
+                  <button type="button" onclick="restartMatchingGame(false)"
+                    class="px-3.5 py-2 rounded-xl border border-[#1B3B2B]/25 text-xs font-bold text-[#1B3B2B] hover:bg-[#F5F0E6]">
+                    Xáo trộn lại
+                  </button>
+                  <button type="button" onclick="restartMatchingGame(true)"
+                    class="px-4 py-2 rounded-xl bg-[#B45309] hover:bg-[#92400e] text-white text-xs font-bold shadow-2xs">
+                    ↻ Đổi bộ câu hỏi
+                  </button>
+                </div>
+              </div>
+
+              ${lastMatchInsight ? `
+                <div class="p-3.5 rounded-2xl bg-[#F5F0E6] border-l-4 border-[#1B3B2B] text-xs sm:text-sm text-[#1F2937] panel-fade">
+                  <strong class="text-[#1B3B2B]">✓ Ghi nhớ lịch sử:</strong> ${lastMatchInsight}
+                </div>
+              ` : ''}
+
+              ${matchedIds.length === 6 ? `
+                <div class="p-6 rounded-2xl bg-[#1B3B2B] text-[#FDFBF7] text-center space-y-3 panel-fade">
+                  <h3 class="font-editorial text-xl sm:text-2xl font-bold text-[#FDE68A]">
+                    Tuyệt Vời! Bạn Đã Nối Chính Xác Toàn Bộ Các Cặp Mốc Lịch Sử
+                  </h3>
+                  <p class="text-xs sm:text-sm text-[#FDFBF7]/85 max-w-xl mx-auto">
+                    Hãy tiếp tục thử sức với bộ câu hỏi còn lại hoặc chuyển sang phần Trắc Nghiệm Nhanh Sử Việt.
+                  </p>
+                  <div class="pt-1 flex flex-wrap justify-center gap-2.5">
+                    <button type="button" onclick="restartMatchingGame(true)"
+                      class="px-4 py-2.5 rounded-xl bg-[#B45309] text-white text-xs sm:text-sm font-bold">
+                      ↻ Đổi bộ câu hỏi
+                    </button>
+                    <button type="button" onclick="switchGameMode('quiz')"
+                      class="px-4 py-2.5 rounded-xl bg-[#FDFBF7] text-[#1B3B2B] text-xs sm:text-sm font-bold">
+                      Sang Trắc Nghiệm Nhanh →
+                    </button>
+                  </div>
+                </div>
+              ` : `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <!-- Cột trái: 6 Sự kiện lịch sử -->
+                  <div class="space-y-2.5">
+                    <div class="text-xs font-bold uppercase tracking-wider text-[#1B3B2B]/70 px-1">Cột Trái • Sự Kiện Lịch Sử</div>
+                    ${matchLeftList.map(item => {
+                      const isMatched = matchedIds.includes(item.id);
+                      const isSelected = selectedLeftId === item.id;
+                      const isWrong = wrongFlashIds.includes(item.id);
+                      return `
+                        <button type="button" onclick="handleSelectLeft('${item.id}')" ${isMatched ? 'disabled' : ''}
+                          class="w-full text-left p-3.5 rounded-2xl border-2 text-xs sm:text-sm font-semibold leading-snug transition-all ${
+                            isMatched
+                              ? 'bg-[#F5F0E6] border-[#1B3B2B] text-[#1B3B2B] opacity-85 cursor-default'
+                              : isWrong
+                                ? 'bg-red-50 border-[#B91C1C] text-[#B91C1C] shake-gentle'
+                                : isSelected
+                                  ? 'bg-[#1B3B2B] text-[#FDFBF7] border-[#B45309] shadow-sm'
+                                  : 'bg-[#FDFBF7] text-[#1F2937] border-[#1B3B2B]/15 hover:border-[#B45309]'
+                          }">
+                          <span class="flex items-center justify-between gap-2">
+                            <span>${item.text}</span>
+                            ${isMatched ? '<span class="text-xs font-extrabold text-[#1B3B2B] shrink-0">✓ Đã nối</span>' : ''}
+                          </span>
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+
+                  <!-- Cột phải: 6 Mốc thời gian / Địa điểm -->
+                  <div class="space-y-2.5">
+                    <div class="text-xs font-bold uppercase tracking-wider text-[#B45309] px-1">Cột Phải • Thời Gian &amp; Địa Điểm</div>
+                    ${matchRightList.map(item => {
+                      const isMatched = matchedIds.includes(item.id);
+                      const isSelected = selectedRightId === item.id;
+                      const isWrong = wrongFlashIds.includes(item.id);
+                      return `
+                        <button type="button" onclick="handleSelectRight('${item.id}')" ${isMatched ? 'disabled' : ''}
+                          class="w-full text-left p-3.5 rounded-2xl border-2 text-xs sm:text-sm font-bold leading-snug transition-all ${
+                            isMatched
+                              ? 'bg-[#F5F0E6] border-[#1B3B2B] text-[#1B3B2B] opacity-85 cursor-default'
+                              : isWrong
+                                ? 'bg-red-50 border-[#B91C1C] text-[#B91C1C] shake-gentle'
+                                : isSelected
+                                  ? 'bg-[#B45309] text-white border-[#1B3B2B] shadow-sm'
+                                  : 'bg-white text-[#1B3B2B] border-[#B45309]/35 hover:border-[#1B3B2B]'
+                          }">
+                          <span class="flex items-center justify-between gap-2">
+                            <span>${item.text}</span>
+                            ${isMatched ? '<span class="text-xs font-extrabold text-[#1B3B2B] shrink-0">✓</span>' : ''}
+                          </span>
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+                </div>
+              `}
+            </div>
+          ` : `
+            <!-- CHẾ ĐỘ 2: TRẮC NGHIỆM NHANH SỬ VIỆT (8 CÂU) -->
+            <div class="bg-white rounded-3xl border border-[#1B3B2B]/15 p-5 sm:p-8 shadow-2xs panel-fade">
+              ${quizFinished ? `
+                <div class="text-center max-w-xl mx-auto py-4 space-y-4">
+                  <span class="inline-block px-3.5 py-1 rounded-full bg-[#F5F0E6] text-[#1B3B2B] text-xs font-bold border border-[#B45309]/35">
+                    KẾT QUẢ ÔN TẬP TRẮC NGHIỆM
+                  </span>
+                  <h3 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B]">
+                    Bạn Trả Lời Đúng ${quizScore} / ${QUICK_QUIZ_QUESTIONS.length} Câu Hỏi
+                  </h3>
+                  <p class="text-sm text-[#1F2937]/85 leading-relaxed">
+                    ${quizScore >= 7
+                      ? 'Xuất sắc! Bạn nắm rất vững các cột mốc cuộc đời, kỷ vật bảo tàng và tên gọi lịch sử của Chủ tịch Hồ Chí Minh.'
+                      : quizScore >= 5
+                        ? 'Khá tốt! Bạn đã ghi nhớ nhiều sự kiện lịch sử tiêu biểu, hãy thử chơi lại để chinh phục trọn vẹn cả 8 câu nhé.'
+                        : 'Cảm ơn bạn đã tham gia ôn tập! Hãy khám phá thêm các chuyên mục trong ấn phẩm rồi thử sức lại nhé.'}
+                  </p>
+                  <div class="pt-2 flex flex-wrap justify-center gap-3">
+                    <button type="button" onclick="resetQuizGame()"
+                      class="px-5 py-3 rounded-xl bg-[#1B3B2B] hover:bg-[#12291E] text-[#FDFBF7] text-xs sm:text-sm font-bold">
+                      Chơi lại trắc nghiệm
+                    </button>
+                    <button type="button" onclick="switchTab('tab4')"
+                      class="px-5 py-3 rounded-xl bg-[#B45309] hover:bg-[#92400e] text-white text-xs sm:text-sm font-bold">
+                      Xem Bút Danh &amp; Tên Gọi →
+                    </button>
+                  </div>
+                </div>
+              ` : (() => {
+                const q = QUICK_QUIZ_QUESTIONS[quizIndex];
+                const letters = ['A', 'B', 'C', 'D'];
+                return `
+                  <div class="space-y-5">
+                    <div class="flex items-center justify-between gap-2 text-xs font-bold border-b border-[#1B3B2B]/10 pb-3">
+                      <span class="text-[#B45309] uppercase tracking-wider">CÂU HỎI ${quizIndex + 1} / ${QUICK_QUIZ_QUESTIONS.length}</span>
+                      <button type="button" onclick="resetQuizGame()" class="text-[#1B3B2B] hover:underline">
+                        Chơi lại từ đầu
+                      </button>
+                    </div>
+
+                    <h3 class="font-editorial text-lg sm:text-xl font-bold text-[#1B3B2B] leading-relaxed">
+                      ${q.q}
+                    </h3>
+
+                    <div class="space-y-2.5">
+                      ${q.options.map((optText, idx) => {
+                        const answered = quizSelectedOpt !== null;
+                        const isPicked = quizSelectedOpt === idx;
+                        const isRight = q.answerIdx === idx;
+
+                        let btnCls = 'bg-[#FDFBF7] border-[#1B3B2B]/15 hover:border-[#1B3B2B] text-[#1F2937]';
+                        if (answered) {
+                          if (isRight) btnCls = 'bg-[#F5F0E6] border-[#1B3B2B] text-[#1B3B2B] ring-2 ring-[#1B3B2B]/20';
+                          else if (isPicked) btnCls = 'bg-red-50 border-[#B91C1C] text-[#B91C1C]';
+                          else btnCls = 'bg-white border-slate-200 text-slate-400';
+                        }
+
+                        return `
+                          <button type="button" onclick="selectQuizOption(${idx})" ${answered ? 'disabled' : ''}
+                            class="w-full text-left p-4 rounded-2xl border-2 transition-all flex items-start gap-3 ${btnCls}">
+                            <span class="w-7 h-7 rounded-lg text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5 ${
+                              answered && isRight
+                                ? 'bg-[#1B3B2B] text-[#FDE68A]'
+                                : answered && isPicked
+                                  ? 'bg-[#B91C1C] text-white'
+                                  : 'bg-[#F5F0E6] text-[#1B3B2B]'
+                            }">
+                              ${letters[idx]}
+                            </span>
+                            <span class="text-xs sm:text-sm font-semibold leading-relaxed">${optText}</span>
+                          </button>
+                        `;
+                      }).join('')}
+                    </div>
+
+                    ${quizSelectedOpt !== null ? `
+                      <div class="p-4 rounded-2xl border ${
+                        quizSelectedOpt === q.answerIdx
+                          ? 'bg-[#F5F0E6] border-[#1B3B2B]/30 text-[#1F2937]'
+                          : 'bg-red-50 border-[#B91C1C]/30 text-[#1F2937]'
+                      } space-y-3 panel-fade">
+                        <div class="text-xs sm:text-sm leading-relaxed">
+                          <strong class="${quizSelectedOpt === q.answerIdx ? 'text-[#1B3B2B]' : 'text-[#B91C1C]'}">
+                            ${quizSelectedOpt === q.answerIdx ? '✓ Chính xác!' : `✕ Đáp án đúng là ${letters[q.answerIdx]}.`}
+                          </strong>
+                          ${q.explain}
+                        </div>
+                        <div class="flex justify-end">
+                          <button type="button" onclick="nextQuizQuestion()"
+                            class="px-5 py-2.5 rounded-xl bg-[#1B3B2B] hover:bg-[#12291E] text-[#FDFBF7] text-xs sm:text-sm font-bold">
+                            ${quizIndex < QUICK_QUIZ_QUESTIONS.length - 1 ? 'Câu tiếp theo →' : 'Xem Kết Quả Tổng Kết →'}
+                          </button>
+                        </div>
+                      </div>
+                    ` : ''}
+                  </div>
+                `;
+              })()}
+            </div>
+          `}
+        </section>
+      `;
+    }
+
+    /**
+     * =====================================================================
+     * TRIỆN DẤU THƯ PHÁP SVG RIÊNG CHO TỪNG TÊN GỌI & BÚT DANH (TAB 04)
+     * =====================================================================
+     */
+    function getPenNameSealSVG(pen) {
+      return `
+        <svg viewBox="0 0 180 180" class="w-36 h-36 sm:w-40 sm:h-40 mx-auto select-none" aria-hidden="true">
+          <!-- Nền giấy cổ và vòng hào quang đồng -->
+          <circle cx="90" cy="90" r="84" fill="#F5F0E6" stroke="#B45309" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- Khung triện đỏ son truyền thống -->
+          <rect x="26" y="26" width="128" height="128" rx="14" fill="#B91C1C" stroke="#991B1B" stroke-width="2.5"/>
+          <rect x="33" y="33" width="114" height="114" rx="10" fill="none" stroke="#FDE68A" stroke-width="1.4" opacity="0.88"/>
+          <!-- Họa tiết góc triện -->
+          <circle cx="42" cy="42" r="2" fill="#FDE68A"/>
+          <circle cx="138" cy="42" r="2" fill="#FDE68A"/>
+          <circle cx="42" cy="138" r="2" fill="#FDE68A"/>
+          <circle cx="138" cy="138" r="2" fill="#FDE68A"/>
+          <!-- Ngôi sao nhỏ phía trên triện -->
+          <polygon points="90,41 92.2,47.2 98.8,47.2 93.5,51 95.5,57.2 90,53.4 84.5,57.2 86.5,51 81.2,47.2 87.8,47.2" fill="#FDE68A"/>
+          <!-- Chữ thư pháp khắc trên triện -->
+          <text x="90" y="81" text-anchor="middle" fill="#FDFBF7" font-family="Merriweather, serif" font-weight="900" font-size="14.5" letter-spacing="1.2">
+            ${pen.sealTop}
+          </text>
+          <text x="90" y="105" text-anchor="middle" fill="#FDE68A" font-family="Merriweather, serif" font-weight="900" font-size="15.5" letter-spacing="1.2">
+            ${pen.sealBottom}
+          </text>
+          <line x1="48" y1="117" x2="132" y2="117" stroke="#FDE68A" stroke-width="1" opacity="0.75"/>
+          <text x="90" y="133" text-anchor="middle" fill="#FDFBF7" font-family="Be Vietnam Pro, sans-serif" font-weight="700" font-size="8.5" letter-spacing="1">
+            ${pen.sealSub}
+          </text>
+        </svg>
+      `;
+    }
+
+    /**
+     * =====================================================================
+     * RENDER TAB 04: BÚT DANH & TÊN GỌI (CHỈ GIẢI MÃ 7 TÊN GỌI LỊCH SỬ)
+     * =====================================================================
+     */
+    function selectPenName(pnId) {
+      selectedPenNameId = pnId;
+      renderTab4PenNames(document.getElementById('tab-viewport'));
+    }
+
+    function renderTab4PenNames(container) {
+      if (!container) return;
+
+      const currentPen = HISTORICAL_PEN_NAMES.find(p => p.id === selectedPenNameId) || HISTORICAL_PEN_NAMES[0];
+
+      container.innerHTML = `
+        <section class="space-y-6 panel-fade">
+          <!-- Tiêu đề Chương 04 -->
+          <div class="border-b border-[#1B3B2B]/15 pb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#B45309]">CHƯƠNG 04 • HỒ SƠ DANH XƯNG &amp; BÚT DANH CÁCH MẠNG</span>
+            <h2 class="font-editorial text-2xl sm:text-3xl font-black text-[#1B3B2B] mt-1">
+              Bút Danh &amp; Tên Gọi Lịch Sử
+            </h2>
+          </div>
+
+          <!-- Lưới chọn 7 tên gọi và bút danh lịch sử -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
+            ${HISTORICAL_PEN_NAMES.map(pn => {
+              const isSelected = pn.id === currentPen.id;
+              return `
+                <button type="button" onclick="selectPenName('${pn.id}')"
+                  class="text-left p-3.5 rounded-2xl border-2 transition-all flex flex-col justify-between gap-2 ${
+                    isSelected
+                      ? 'bg-[#1B3B2B] text-[#FDFBF7] border-[#B45309] shadow-md'
+                      : 'bg-white text-[#1F2937] border-[#1B3B2B]/14 hover:border-[#B45309] hover:bg-[#F5F0E6]/60'
+                  }">
+                  <span class="text-xs font-extrabold ${isSelected ? 'text-[#FDE68A]' : 'text-[#B91C1C]'}">
+                    ${pn.periodBadge}
+                  </span>
+                  <div>
+                    <span class="font-editorial text-xs sm:text-sm font-bold leading-snug block ${
+                      isSelected ? 'text-[#FDFBF7]' : 'text-[#1B3B2B]'
+                    }">
+                      ${pn.name}
+                    </span>
+                    <span class="text-[10px] mt-1 block leading-tight ${
+                      isSelected ? 'text-[#FDFBF7]/75' : 'text-[#1F2937]/65'
+                    }">
+                      ${pn.roleTag}
+                    </span>
+                  </div>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Khung Hồ Sơ Giải Mã Tên Gọi trang trọng -->
+          <article class="rounded-3xl bg-white border-2 border-[#1B3B2B]/18 p-5 sm:p-8 shadow-sm space-y-6 panel-fade">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-b border-[#1B3B2B]/12 pb-6">
+              <!-- Cột trái: Triện dấu thư pháp SVG riêng cho từng tên -->
+              <div class="lg:col-span-4 flex flex-col items-center justify-center p-4 rounded-2xl bg-[#FDFBF7] border border-[#B45309]/25">
+                ${getPenNameSealSVG(currentPen)}
+                <span class="mt-2.5 text-[11px] font-bold uppercase tracking-widest text-[#B45309]">
+                  Triện Dấu Danh Xưng
+                </span>
+              </div>
+
+              <!-- Cột phải: Tiêu đề danh xưng & Giai đoạn sử dụng -->
+              <div class="lg:col-span-8 space-y-3.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-[#B91C1C] text-white text-xs font-bold">
+                    ${currentPen.roleTag}
+                  </span>
+                  <span class="px-3 py-1 rounded-full bg-[#F5F0E6] text-[#1B3B2B] text-xs font-bold border border-[#B45309]/35">
+                    Mốc thời gian: ${currentPen.periodBadge}
+                  </span>
+                </div>
+
+                <h3 class="font-editorial text-2xl sm:text-4xl font-black text-[#1B3B2B]">
+                  ${currentPen.name}
+                </h3>
+
+                <div class="p-4 rounded-2xl bg-[#F5F0E6] border-l-4 border-[#B45309]">
+                  <span class="block text-[11px] font-extrabold uppercase tracking-wider text-[#B45309]">
+                    Giai đoạn sử dụng
+                  </span>
+                  <p class="text-xs sm:text-sm font-semibold text-[#1B3B2B] mt-1 leading-relaxed">
+                    ${currentPen.usagePeriod}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 khung giải mã chi tiết: Hoàn cảnh ra đời, Ý nghĩa tên gọi & Dấu ấn lịch sử -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+              <div class="p-5 rounded-2xl bg-[#FDFBF7] border border-[#1B3B2B]/14 space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-[#B45309] block">
+                  1. Hoàn cảnh ra đời
+                </span>
+                <p class="text-xs sm:text-sm text-[#1F2937] leading-relaxed">
+                  ${currentPen.originContext}
+                </p>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-[#F5F0E6] border border-[#B45309]/30 space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-[#1B3B2B] block">
+                  2. Ý nghĩa tên gọi
+                </span>
+                <p class="text-xs sm:text-sm text-[#1F2937] leading-relaxed">
+                  ${currentPen.nameMeaning}
+                </p>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-[#FDFBF7] border border-[#1B3B2B]/14 space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-[#B91C1C] block">
+                  3. Dấu ấn lịch sử gắn liền
+                </span>
+                <p class="text-xs sm:text-sm text-[#1F2937] leading-relaxed">
+                  ${currentPen.historicalImprint}
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+      `;
+    }
+
+    /**
+     * =====================================================================
+     * KHỞI TẠO CHUYÊN SAN KHI TẢI TRANG
+     * =====================================================================
+     */
+    window.addEventListener('DOMContentLoaded', () => {
+      initMatchingGame(false);
+      renderTabsBar();
+      renderActiveTab();
+    });
+  </script>
+</body>
+</html>
